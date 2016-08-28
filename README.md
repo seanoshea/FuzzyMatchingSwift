@@ -1,6 +1,6 @@
 # FuzzyMatchingSwift
 
-[![CI Status](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift.svg?style=svg)](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift.svg?style=svg)
+[![CI Status](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop.svg?style=svg)](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop)
 [![Code Coverage](http://codecov.io/github/seanoshea/FuzzyMatchingSwift/coverage.svg?branch=develop)](http://codecov.io/github/seanoshea/FuzzyMatchingSwift?branch=develop)
 [![Version](https://img.shields.io/cocoapods/v/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![License](https://img.shields.io/cocoapods/l/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
@@ -9,10 +9,6 @@
 ## Acknowledgements
 
 The majority of the fuzzy matching logic included in this project is taken from Neil Fraser's [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
-
-## Documentation
-
-Documentation for the application is generated using [Jazzy](https://github.com/realm/jazzy) which is a fantastic documentation generation library from the good people at [Realm](https://realm.io). Run `generate_docs.sh` after a `bundle install` to generate the documentation for the project.
 
 ## Installation
 

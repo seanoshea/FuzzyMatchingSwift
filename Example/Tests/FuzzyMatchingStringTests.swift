@@ -21,16 +21,16 @@ import FuzzyMatchingSwift
 
 class FuzzyMatchingStringTests: XCTestCase {
 
-    func testWithoutOptions() {
-      XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)
-      XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == NSNotFound)
-      XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == NSNotFound)
-      XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3, options:nil) == 3)
-      XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4, options:nil) == 4)
-      XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0, options:nil) == 0)
-      XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5, options:nil) == 5)
-      XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30, options:nil) == 30)
-    }
+  func testWithoutOptions() {
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)
+    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == NSNotFound)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == NSNotFound)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3, options:nil) == 3)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4, options:nil) == 4)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0, options:nil) == 0)
+    XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5, options:nil) == 5)
+    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30, options:nil) == 30)
+  }
 
   func testWithThresholdOptions() {
     let options = [FuzzyMatchingOptionsParams.threshold.rawValue : 1.0]
