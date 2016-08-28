@@ -22,6 +22,7 @@ import FuzzyMatchingSwift
 class FuzzyMatchingStringTests: XCTestCase {
 
   func testWithoutOptions() {
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef") == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)
     XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == NSNotFound)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == NSNotFound)
