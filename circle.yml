@@ -4,6 +4,6 @@ machine:
 test:
   override:
     - set -o pipefail && xcodebuild test -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-    - bundle exec pod lib lint
+    - bundle exec pod lib lint --allow-warnings
   post:
     - bash <(curl -s https://codecov.io/bash)
