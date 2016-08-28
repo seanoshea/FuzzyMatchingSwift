@@ -1,0 +1,22 @@
+{
+  "name": "FuzzyMatchingSwift",
+  "version": "0.1.0",
+  "summary": "A short description of FuzzyMatchingSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/FuzzyMatchingSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "seanoshea": "oshea.ie@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/FuzzyMatchingSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FuzzyMatchingSwift/Classes/**/*"
+}

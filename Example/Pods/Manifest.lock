@@ -1,0 +1,16 @@
+PODS:
+  - FuzzyMatchingSwift (0.1.0)
+
+DEPENDENCIES:
+  - FuzzyMatchingSwift (from `../`)
+
+EXTERNAL SOURCES:
+  FuzzyMatchingSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FuzzyMatchingSwift: 2456c0c4ae889479855c30731020efb30a67804c
+
+PODFILE CHECKSUM: 0657053ecdb1c4ad5d48589ae3ae8b6737173729
+
+COCOAPODS: 1.0.1

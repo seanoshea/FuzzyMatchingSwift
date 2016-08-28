@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'FuzzyMatchingSwift_Example' do
+  pod 'FuzzyMatchingSwift', :path => '../'
+
+  target 'FuzzyMatchingSwift_Tests' do
+    inherit! :search_paths
+  end
+  
+end
