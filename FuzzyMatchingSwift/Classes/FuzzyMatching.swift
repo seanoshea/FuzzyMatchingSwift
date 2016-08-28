@@ -193,7 +193,8 @@ extension String {
       let finish = min(loc + binMid, self.characters.count) + pattern.characters.count
       rd = [Int?](count:finish + 2, repeatedValue:0)
       rd[finish + 1] = (1 << index) - 1
-      for (var j = finish; j >= start; j = j - 1) {
+      var j = finish
+      for _ in j.stride(to: start - 1, by: -1) {
         var charMatch:Int
         if self.characters.count <= j - 1 {
           charMatch = 0
@@ -222,6 +223,7 @@ extension String {
             }
           }
         }
+        j = j - 1
       }
       if self.bitapScoreForErrorCount(index + 1, x:loc, loc:loc, pattern:pattern, distance:distance) > scoreThreshold {
         break
