@@ -30,6 +30,34 @@ public enum FuzzyMatchingOptionsDefaultValues : Double {
   case distance = 1000.0
 }
 
+extension _ArrayType where Generator.Element == String {
+  
+  public func sortedByFuzzyMatchPattern(pattern:String) -> [String] {
+    var sortedArray = [String]()
+    for element in 10.stride(to: 1, by: -1) {
+      // stop if we've already found all there is to find
+      if sortedArray.count == self.count { break }
+      // otherwise, proceed to the rest of the values
+      let threshold:Double = Double(element / 10)
+      let options = [FuzzyMatchingOptionsParams.threshold.rawValue : threshold]
+      for value in self {
+        if !sortedArray.contains(value) {
+          if value.fuzzyMatchPattern(pattern, loc: 0, options: options) != NSNotFound {
+            sortedArray.append(value)
+          }
+        }
+      }
+    }
+    // make sure that the array we return to the user has ALL elements which is in the initial array
+    for value in self {
+      if !sortedArray.contains(value) {
+        sortedArray.append(value)
+      }
+    }
+    return sortedArray
+  }
+}
+
 extension String {
 
   public func fuzzyMatchPattern(pattern:String) -> Int {

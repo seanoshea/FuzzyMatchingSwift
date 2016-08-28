@@ -24,7 +24,7 @@ import XCTest
 
 import FuzzyMatchingSwift
 
-class FuzzyMatchingTests: XCTestCase {
+class FuzzyMatchingStringTests: XCTestCase {
 
     func testWithoutOptions() {
       XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)

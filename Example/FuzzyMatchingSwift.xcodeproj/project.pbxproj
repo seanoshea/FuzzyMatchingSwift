@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41F7FDC11D720ED200BF069A /* FuzzyMatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingTests.swift */; };
+		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
+		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
 		AD1DDA8BEC05E6E7B53F0C9D /* Pods_FuzzyMatchingSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -16,7 +17,8 @@
 		17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		189D90DDCF5336C8099E2CB8 /* Pods_FuzzyMatchingSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		256F5E07F5B85BDB335F6D31 /* FuzzyMatchingSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FuzzyMatchingSwift.podspec; path = ../FuzzyMatchingSwift.podspec; sourceTree = "<group>"; };
-		41F7FDC01D720ED200BF069A /* FuzzyMatchingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingTests.swift; sourceTree = "<group>"; };
+		4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingArrayTests.swift; sourceTree = "<group>"; };
+		41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingStringTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* FuzzyMatchingSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMatchingSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +73,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				41F7FDC01D720ED200BF069A /* FuzzyMatchingTests.swift */,
+				4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */,
+				41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -238,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F7FDC11D720ED200BF069A /* FuzzyMatchingTests.swift in Sources */,
+				41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */,
+				417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
