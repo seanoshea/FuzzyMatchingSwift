@@ -10,6 +10,24 @@
 
 The majority of the fuzzy matching logic included in this project is taken from Neil Fraser's [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
 
+## Requirements
+
+Supports iOS9 and above.
+
+## Documentation
+
+All documentation is maintained at [cocoadocs](http://cocoadocs.org/docsets/FuzzyMatchingSwift/)
+
+## Usage
+
+```swift
+// strings
+"abcdef".fuzzyMatchPattern("ab") // returns 0
+"abcdef".fuzzyMatchPattern("z") // returns NSNotFound
+// arrays
+["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on") // returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
+```
+
 ## Installation
 
 FuzzyMatchingSwift is available through [CocoaPods](http://cocoapods.org). To install
