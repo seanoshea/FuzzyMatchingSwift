@@ -25,11 +25,11 @@ pod "FuzzyMatchingSwift"
 
 ## Author
 
-seanoshea, oshea.ie@gmail.com
+seanoshea, oshea.ie@gmail.com. See the Acknowledgements section for the original basis for this code.
 
 ## License
 
-FuzzyMatchingSwift is available under the MIT license. See the LICENSE file for more info.
+FuzzyMatchingSwift is available under the Apache 2 license. See the LICENSE file for more info.
 
 ## Contributing
 

@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings.
                        DESC
   s.homepage         = 'https://github.com/seanoshea/FuzzyMatchingSwift'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'Apache 2', :file => 'LICENSE' }
   s.author           = { 'seanoshea' => 'oshea.ie@gmail.com' }
   s.source           = { :git => 'https://github.com/seanoshea/FuzzyMatchingSwift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/seanoshea'
