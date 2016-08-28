@@ -15,29 +15,59 @@
  
  */
 
+/**
+ Defines parameter constants which can be used in the `options` parameter in any `fuzzyMatchPattern` calls.
+ */
 public enum FuzzyMatchingOptionsParams : String {
   case threshold = "threshold"
   case distance = "distance"
 }
 
+/**
+ Defines parameter value constants which are used if no `options` parameters are passed to `fuzzyMatchPattern` calls.
+ */
 public enum FuzzyMatchingOptionsDefaultValues : Double {
   case threshold = 0.5
   case distance = 1000.0
 }
 
+/**
+ Allows for fuzzy matching to happen on all String elements in an Array.
+ */
 extension _ArrayType where Generator.Element == String {
   
+  /**
+   Iterates over all elements in the array and executes a fuzzy match using the `pattern` parameter.
+   
+   - parameter pattern:  The pattern to search for.
+   - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
+   */
   public func sortedByFuzzyMatchPattern(pattern:String) -> [String] {
+    return self.sortedByFuzzyMatchPattern(pattern, loc: 0, distance:nil)
+  }
+
+  /**
+   Iterates over all elements in the array and executes a fuzzy match using the `pattern` parameter.
+   
+   - parameter pattern:  The pattern to search for.
+   - parameter loc:  The index in the element from which to search.
+   - parameter distance:  Determines how close the match must be to the fuzzy location. See `loc` parameter.
+   - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
+   */
+  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int, distance:Double?) -> [String] {
     var sortedArray = [String]()
     for element in 10.stride(to: 1, by: -1) {
       // stop if we've already found all there is to find
       if sortedArray.count == self.count { break }
       // otherwise, proceed to the rest of the values
       let threshold:Double = Double(element / 10)
-      let options = [FuzzyMatchingOptionsParams.threshold.rawValue : threshold]
+      var options = [FuzzyMatchingOptionsParams.threshold.rawValue : threshold]
+      if distance != nil {
+        options[FuzzyMatchingOptionsParams.distance.rawValue] = distance
+      }
       for value in self {
         if !sortedArray.contains(value) {
-          if value.fuzzyMatchPattern(pattern, loc: 0, options: options) != NSNotFound {
+          if value.fuzzyMatchPattern(pattern, loc: loc, options: options) != NSNotFound {
             sortedArray.append(value)
           }
         }
@@ -53,12 +83,29 @@ extension _ArrayType where Generator.Element == String {
   }
 }
 
+/**
+ Allows for fuzzy matching to happen on Strings
+ */
 extension String {
 
+  /**
+   Executes a fuzzy match on the String using the `pattern` parameter.
+   
+   - parameter pattern:  The pattern to search for.
+   - returns: An Int indicating where the fuzzy matched pattern can be found in the String. Returns `NSNotFound` if no match can be found.
+   */
   public func fuzzyMatchPattern(pattern:String) -> Int {
     return self.fuzzyMatchPattern(pattern, loc: 0, options: nil)
   }
 
+  /**
+   Executes a fuzzy match on the String using the `pattern` parameter.
+   
+   - parameter pattern:  The pattern to search for.
+   - parameter loc:  The index in the element from which to search.
+   - parameter options:  Dictates how the search is executed. See `FuzzyMatchingOptionsParams` and `FuzzyMatchingOptionsDefaultValues` for details.
+   - returns: An Int indicating where the fuzzy matched pattern can be found in the String. Returns `NSNotFound` if no match can be found.
+   */
   public func fuzzyMatchPattern(pattern:String, loc:Int, options:[String: Double]?) -> Int {
     guard self.characters.count > 0 else { return NSNotFound }
     let generatedOptions = self.generateOptions(options)
