@@ -1,9 +1,9 @@
 {
   "name": "FuzzyMatchingSwift",
   "version": "0.1.0",
-  "summary": "A short description of FuzzyMatchingSwift.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/FuzzyMatchingSwift",
+  "summary": "Fuzzy matching String extensions.",
+  "description": "FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings.",
+  "homepage": "https://github.com/seanoshea/FuzzyMatchingSwift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "seanoshea": "oshea.ie@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/FuzzyMatchingSwift.git",
+    "git": "https://github.com/seanoshea/FuzzyMatchingSwift.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/seanoshea",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "FuzzyMatchingSwift/Classes/**/*"
 }
