@@ -1,5 +1,4 @@
-disabled_rules: # rule identifiers to exclude from running
-  - whitespace
+disabled_rules:
   - line_length
   - variable_name
   - trailing_whitespace
@@ -8,7 +7,6 @@ disabled_rules: # rule identifiers to exclude from running
   - type_name
   - cyclomatic_complexity
   - function_parameter_count
-
 excluded:
   - Carthage
   - Pods

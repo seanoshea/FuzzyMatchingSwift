@@ -119,7 +119,7 @@ extension String {
       return NSNotFound
     } else {
       if (location + pattern.characters.count) < self.characters.count {
-        let substring = (self as NSString).substringWithRange(NSMakeRange(location, pattern.characters.count))
+        let substring = self[self.startIndex.advancedBy(0)...self.startIndex.advancedBy(pattern.characters.count)]
         if pattern.caseInsensitiveCompare(substring) == NSComparisonResult.OrderedSame {
           return location
         } else {
