@@ -179,9 +179,9 @@ extension String {
     for (index, _) in pattern.characters.enumerate() {
       binMin = 0
       binMid = binMax
-      while (binMin < binMid) {
+      while binMin < binMid {
         let score = self.bitapScoreForErrorCount(index, x:(loc + binMid), loc:loc, pattern:pattern, distance:distance)
-        if (score <= scoreThreshold) {
+        if score <= scoreThreshold {
           binMin = binMid
         } else {
           binMax = binMid
@@ -200,23 +200,23 @@ extension String {
           charMatch = 0
         } else {
           let character = String(self[self.startIndex.advancedBy(j - 1)])
-          if (self.characters.count <= j - 1 || alphabet[character] == nil) {
+          if self.characters.count <= j - 1 || alphabet[character] == nil {
             charMatch = 0
           } else {
             charMatch = alphabet[character]!
           }
         }
-        if (index == 0) {
+        if index == 0 {
           rd[j] = ((rd[j + 1]! << 1) | 1) & charMatch
         } else {
           rd[j] = (((rd[j + 1]! << 1) | 1) & charMatch) | (((lastRd[j + 1]! | lastRd[j]!) << 1) | 1) | lastRd[j + 1]!
         }
-        if ((rd[j]! & matchMask) != 0) {
+        if (rd[j]! & matchMask) != 0 {
           let score = self.bitapScoreForErrorCount(index, x:(j - 1), loc:loc, pattern:pattern, distance:distance)
-          if (score <= scoreThreshold) {
+          if score <= scoreThreshold {
             scoreThreshold = score
             bestLoc = j - 1
-            if (bestLoc > loc) {
+            if bestLoc > loc {
               start = self.maxOfConstAndDiff(1, b:2 * loc, c:bestLoc)
             } else {
               break
