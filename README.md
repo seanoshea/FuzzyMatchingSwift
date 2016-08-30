@@ -23,9 +23,10 @@ All documentation is maintained at [cocoadocs](http://cocoadocs.org/docsets/Fuzz
 ```swift
 // strings
 "abcdef".fuzzyMatchPattern("ab") // returns 0
-"abcdef".fuzzyMatchPattern("z") // returns NSNotFound
+"abcdef".fuzzyMatchPattern("z") // returns nil
 // arrays
-["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on") // returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
+["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
+// returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
 ```
 
 ## Installation
