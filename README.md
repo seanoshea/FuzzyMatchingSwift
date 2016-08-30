@@ -37,6 +37,14 @@ it, simply add the following line to your Podfile:
 pod "FuzzyMatchingSwift"
 ```
 
+## SwiftLint
+
+[SwiftLint](https://github.com/realm/SwiftLint) can be run on the codebase with:
+
+```bash
+swiftlint lint --config .swiftlint.yml
+```
+
 ## Author
 
 seanoshea, oshea.ie@gmail.com. See the Acknowledgements section for the original basis for this code.
