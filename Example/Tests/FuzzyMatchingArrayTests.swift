@@ -22,9 +22,11 @@ class FuzzyMatchingArrayTests: XCTestCase {
   func testMatchingStringsInArraysWithoutOptions() {
     let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
     let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
+    let third = ["one"].sortedByFuzzyMatchPattern("on")
       
     XCTAssert(first[0] == "one")
     XCTAssert(first[1] == "two")
+    XCTAssert(first.count == 3)
       
     XCTAssert(second[0] == "one")
     XCTAssert(second[1] == "two")
@@ -32,11 +34,16 @@ class FuzzyMatchingArrayTests: XCTestCase {
     XCTAssert(second[3] == "seven")
     XCTAssert(second[4] == "nine")
     XCTAssert(second[5] == "ten")
+    XCTAssert(second.count == 10)
+    
+    XCTAssert(third[0] == "one")
+    XCTAssert(third.count == 1)
   }
   
   func testMatchingStringsInArraysWithOptions() {
     let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
     let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 10, distance: 1.0)
+    let third = ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
     
     XCTAssert(first[0] == "one")
     XCTAssert(first[1] == "two")
@@ -51,5 +58,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
     XCTAssert(second[7] == "six")
     XCTAssert(second[8] == "eight")
     XCTAssert(second[9] == "nine")
+    
+    XCTAssert(third == first)
   }
 }

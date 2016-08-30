@@ -24,8 +24,8 @@ class FuzzyMatchingStringTests: XCTestCase {
   func testWithoutOptions() {
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef") == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)
-    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == NSNotFound)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == NSNotFound)
+    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == nil)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3, options:nil) == 3)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4, options:nil) == 4)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0, options:nil) == 0)
@@ -36,12 +36,12 @@ class FuzzyMatchingStringTests: XCTestCase {
   func testWithThresholdOptions() {
     let options = [FuzzyMatchingOptionsParams.threshold.rawValue : 1.0]
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == NSNotFound)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
   }
 
   func testWithDistanceOptions() {
     let options = [FuzzyMatchingOptionsParams.distance.rawValue : 1.0]
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc:0, options:options) == NSNotFound)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc:0, options:options) == nil)
   }
 }
