@@ -31,6 +31,8 @@ class FuzzyMatchingStringTests: XCTestCase {
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0, options:nil) == 0)
     XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5, options:nil) == 5)
     XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30, options:nil) == 30)
+    XCTAssertTrue("🐶".fuzzyMatchPattern("🐶") == 0)
+    XCTAssertTrue("🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") == 1)
   }
 
   func testWithThresholdOptions() {

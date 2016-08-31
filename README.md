@@ -24,6 +24,7 @@ All documentation is maintained at [cocoadocs](http://cocoadocs.org/docsets/Fuzz
 // strings
 "abcdef".fuzzyMatchPattern("ab") // returns 0
 "abcdef".fuzzyMatchPattern("z") // returns nil
+"🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") // returns 1
 // arrays
 ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
