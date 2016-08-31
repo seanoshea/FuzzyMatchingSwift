@@ -138,17 +138,21 @@ extension String {
   func matchBitapOfText(pattern:String, loc:Int, threshold:Double, distance:Double) -> Int? {
     let alphabet = matchAlphabet(pattern)
     var scoreThreshold = threshold
-
-    var bestLoc = (self as NSString).rangeOfString(pattern, options:NSStringCompareOptions.LiteralSearch, range:NSMakeRange(0, characters.count - 0), locale: NSLocale.currentLocale()).location
-    if bestLoc != NSNotFound {
+    var bestLoc = NSNotFound
+    var range: Range<String.Index> = startIndex..<startIndex.advancedBy(characters.count)
+    
+    if let possibleLiteralSearchRange = rangeOfString(pattern, options:NSStringCompareOptions.LiteralSearch, range:range, locale: NSLocale.currentLocale()) {
+      bestLoc = startIndex.distanceTo(possibleLiteralSearchRange.startIndex)
       scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), scoreThreshold)
-      let searchRangeLoc = min(loc + pattern.characters.count, characters.count)
-      let searchRange = NSMakeRange(0, searchRangeLoc)
-      bestLoc = (self as NSString).rangeOfString(pattern, options:NSStringCompareOptions.BackwardsSearch, range:searchRange, locale:NSLocale.currentLocale()).location
-      if bestLoc != NSNotFound {
+      range = startIndex..<startIndex.advancedBy(min(loc + pattern.characters.count, characters.count))
+      if let possibleBackwardsSearchRange = rangeOfString(pattern, options:NSStringCompareOptions.BackwardsSearch, range:range, locale: NSLocale.currentLocale()) {
+        bestLoc = startIndex.distanceTo(possibleBackwardsSearchRange.startIndex)
         scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), scoreThreshold)
+      } else {
+        bestLoc = NSNotFound
       }
     }
+    
     let matchMask = 1 << (pattern.characters.count - 1)
     var binMin:Int
     var binMid:Int
