@@ -10,14 +10,6 @@
 
 The majority of the fuzzy matching logic included in this project is taken from Neil Fraser's [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
 
-## Requirements
-
-Supports iOS9 and above.
-
-## Documentation
-
-All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/FuzzyMatchingSwift/)
-
 ## Usage
 
 ```swift
@@ -29,6 +21,14 @@ All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/Fuzz
 ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
 ```
+
+## Documentation
+
+All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/FuzzyMatchingSwift/)
+
+## Requirements
+
+Supports iOS9 and above.
 
 ## Installation
 
