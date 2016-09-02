@@ -16,7 +16,7 @@ Supports iOS9 and above.
 
 ## Documentation
 
-All documentation is maintained at [cocoadocs](http://cocoadocs.org/docsets/FuzzyMatchingSwift/)
+All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/FuzzyMatchingSwift/)
 
 ## Usage
 
@@ -32,12 +32,23 @@ All documentation is maintained at [cocoadocs](http://cocoadocs.org/docsets/Fuzz
 
 ## Installation
 
-FuzzyMatchingSwift is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+FuzzyMatchingSwift is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod "FuzzyMatchingSwift"
 ```
+
+### Carthage
+
+FuzzyMatchingSwift is available via [Carthage](https://github.com/Carthage/Carthage). To install, just add this entry to your Cartfile:
+
+```ruby
+github "seanoshea/FuzzyMatchingSwift"
+```
+
+Once you've altered your Cartfile, simply run `carthage update`. Check out the instructions in [Carthage's README][carthage-installation] for up to date installation instructions.
 
 ## SwiftLint
 
