@@ -49,7 +49,7 @@ FuzzyMatchingSwift is available via [Carthage](https://github.com/Carthage/Carth
 github "seanoshea/FuzzyMatchingSwift"
 ```
 
-Once you've altered your Cartfile, simply run `carthage update`. Check out the instructions in [Carthage's README][carthage-installation] for up to date installation instructions.
+Once you've altered your Cartfile, simply run `carthage update`. Check out the instructions in [Carthage's README](https://github.com/Carthage/Carthage) for up to date installation instructions.
 
 ## SwiftLint
 
