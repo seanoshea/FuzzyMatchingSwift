@@ -9,20 +9,6 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "FuzzyMatchingSwift_Example.app"
-               BlueprintName = "FuzzyMatchingSwift_Example"
-               ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -54,15 +40,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FuzzyMatchingSwift_Example.app"
-            BlueprintName = "FuzzyMatchingSwift_Example"
-            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -76,16 +53,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FuzzyMatchingSwift_Example.app"
-            BlueprintName = "FuzzyMatchingSwift_Example"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "FuzzyMatchingSwift_Tests.xctest"
+            BlueprintName = "FuzzyMatchingSwift_Tests"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -95,16 +71,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "FuzzyMatchingSwift_Example.app"
-            BlueprintName = "FuzzyMatchingSwift_Example"
+            BlueprintIdentifier = "607FACE41AFB9204008FA782"
+            BuildableName = "FuzzyMatchingSwift_Tests.xctest"
+            BlueprintName = "FuzzyMatchingSwift_Tests"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -4,6 +4,7 @@ machine:
 test:
   override:
     - set -o pipefail && xcodebuild test -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
+    - set -o pipefail && xcodebuild test -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Mac clean build
     - bundle exec pod lib lint --quick --allow-warnings
   post:
     - bash <(curl -s https://codecov.io/bash)

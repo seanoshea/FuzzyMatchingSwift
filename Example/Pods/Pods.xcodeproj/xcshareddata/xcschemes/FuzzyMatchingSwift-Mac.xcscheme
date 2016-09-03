@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "41F192451D7B2566008A01F8"
-               BuildableName = "FuzzyMatchingSwift-Mac.framework"
+               BuildableName = "FuzzyMatchingSwiftMac.framework"
                BlueprintName = "FuzzyMatchingSwift-Mac"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "FuzzyMatchingSwift_Tests.xctest"
+               BlueprintName = "FuzzyMatchingSwift_Tests"
+               ReferencedContainer = "container:../FuzzyMatchingSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "41F192451D7B2566008A01F8"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
+            BlueprintName = "FuzzyMatchingSwift-Mac"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -46,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41F192451D7B2566008A01F8"
-            BuildableName = "FuzzyMatchingSwift-Mac.framework"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
             BlueprintName = "FuzzyMatchingSwift-Mac"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -64,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41F192451D7B2566008A01F8"
-            BuildableName = "FuzzyMatchingSwift-Mac.framework"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
             BlueprintName = "FuzzyMatchingSwift-Mac"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
