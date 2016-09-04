@@ -15,6 +15,8 @@
  
  */
 
+import Foundation
+
 /**
  Defines parameter constants which can be used in the `options` parameter in any `fuzzyMatchPattern` calls.
  */

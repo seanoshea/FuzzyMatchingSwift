@@ -65,4 +65,4 @@ fastlane/screenshots
 fastlane/test_output
 
 docs/
-
+.DS_Store

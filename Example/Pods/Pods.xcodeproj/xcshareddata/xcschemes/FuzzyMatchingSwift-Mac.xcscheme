@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,15 +9,15 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "FuzzyMatchingSwift_Tests.xctest"
-               BlueprintName = "FuzzyMatchingSwift_Tests"
-               ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
+               BlueprintIdentifier = "41F192451D7B2566008A01F8"
+               BuildableName = "FuzzyMatchingSwiftMac.framework"
+               BlueprintName = "FuzzyMatchingSwift-Mac"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,8 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -36,10 +35,19 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "FuzzyMatchingSwift_Tests.xctest"
                BlueprintName = "FuzzyMatchingSwift_Tests"
-               ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
+               ReferencedContainer = "container:../FuzzyMatchingSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "41F192451D7B2566008A01F8"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
+            BlueprintName = "FuzzyMatchingSwift-Mac"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -56,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "FuzzyMatchingSwift_Tests.xctest"
-            BlueprintName = "FuzzyMatchingSwift_Tests"
-            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
+            BlueprintIdentifier = "41F192451D7B2566008A01F8"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
+            BlueprintName = "FuzzyMatchingSwift-Mac"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -74,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACE41AFB9204008FA782"
-            BuildableName = "FuzzyMatchingSwift_Tests.xctest"
-            BlueprintName = "FuzzyMatchingSwift_Tests"
-            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
+            BlueprintIdentifier = "41F192451D7B2566008A01F8"
+            BuildableName = "FuzzyMatchingSwiftMac.framework"
+            BlueprintName = "FuzzyMatchingSwift-Mac"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
