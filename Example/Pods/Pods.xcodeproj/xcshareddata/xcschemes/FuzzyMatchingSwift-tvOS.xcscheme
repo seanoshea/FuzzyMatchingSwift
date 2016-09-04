@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
-               BuildableName = "FuzzyMatchingSwift-tvOS.framework"
+               BuildableName = "FuzzyMatchingSwift.framework"
                BlueprintName = "FuzzyMatchingSwift-tvOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
-            BuildableName = "FuzzyMatchingSwift-tvOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-tvOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
-            BuildableName = "FuzzyMatchingSwift-tvOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-tvOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
