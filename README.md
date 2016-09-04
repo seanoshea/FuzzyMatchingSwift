@@ -29,10 +29,10 @@ All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/Fuzz
 
 ## Requirements
 
-iOS > 9.0
-MacOS > 10.10
-watchOS > 2.0
-tvOS > 9.0
+* iOS >= 9.0
+* MacOS >= 10.10
+* watchOS >= 2.0
+* tvOS >= 9.0
 
 ## Installation
 
