@@ -1,5 +1,12 @@
 disabled_rules:
   - line_length
+  - variable_name
+  - trailing_whitespace
+  - colon
+  - function_body_length
+  - type_name
+  - cyclomatic_complexity
+  - function_parameter_count
 excluded:
   - Carthage
   - Pods
