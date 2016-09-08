@@ -18,15 +18,36 @@
 import Foundation
 
 /**
- Defines parameter constants which can be used in the `options` parameter in any `fuzzyMatchPattern` calls.
+ Allows client code to pass parameters to the `fuzzyMatchPattern` calls.
  */
-public enum FuzzyMatchingOptionsParams : String {
-  case threshold = "threshold"
-  case distance = "distance"
+public struct FuzzyMatchOptions {
+  // defines how strict you want to be when fuzzy matching. A value of 1.0 equals to an exact match. A value of 0.1 indicates a very loose understanding of whether a match has been found.
+  var threshold:Double = FuzzyMatchingOptionsDefaultValues.threshold.rawValue
+  // defines where in the host String to look for the pattern
+  var distance:Double = FuzzyMatchingOptionsDefaultValues.distance.rawValue
+  
+  /**
+   Standard initializer.
+   */
+  public init() {
+    
+  }
+  
+  /**
+   Initializer which defines `threshold` and `distance` parameters.
+   
+   - parameter threshold: The threshold value to set
+   - parameter distance:  The distance value to set
+   - returns: An instance of `FuzzyMatchOptions`
+   */
+  public init(threshold: Double, distance: Double) {
+    self.threshold = threshold
+    self.distance = distance
+  }
 }
 
 /**
- Defines parameter value constants which are used if no `options` parameters are passed to `fuzzyMatchPattern` calls.
+ Defines constants which are used if no `options` parameters are passed to `fuzzyMatchPattern` calls.
  */
 public enum FuzzyMatchingOptionsDefaultValues : Double {
   case threshold = 0.5
@@ -41,9 +62,9 @@ extension _ArrayType where Generator.Element == String {
   /**
    Iterates over all elements in the array and executes a fuzzy match using the `pattern` parameter.
    
-   - parameter pattern:  The pattern to search for.
-   - parameter loc:  The index in the element from which to search.
-   - parameter distance:  Determines how close the match must be to the fuzzy location. See `loc` parameter.
+   - parameter pattern: The pattern to search for.
+   - parameter loc: The index in the element from which to search.
+   - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
    */
   public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = 1000.0) -> [String] {
@@ -52,10 +73,9 @@ extension _ArrayType where Generator.Element == String {
       // stop if we've already found all there is to find
       if sortedArray.count == count { break }
       // otherwise, proceed to the rest of the values
-      let threshold:Double = Double(element / 10)
-      var options = [FuzzyMatchingOptionsParams.threshold.rawValue : threshold]
-      if distance != nil {
-        options[FuzzyMatchingOptionsParams.distance.rawValue] = distance
+      var options = FuzzyMatchOptions.init(threshold:Double(element / 10), distance:FuzzyMatchingOptionsDefaultValues.distance.rawValue)
+      if let unwrappedDistance = distance {
+        options.distance = unwrappedDistance
       }
       for value in self {
         if !sortedArray.contains(value) {
@@ -83,17 +103,17 @@ extension String {
   /**
    Executes a fuzzy match on the String using the `pattern` parameter.
    
-   - parameter pattern:  The pattern to search for.
-   - parameter loc:  The index in the element from which to search.
-   - parameter options:  Dictates how the search is executed. See `FuzzyMatchingOptionsParams` and `FuzzyMatchingOptionsDefaultValues` for details.
+   - parameter pattern: The pattern to search for.
+   - parameter loc: The index in the element from which to search.
+   - parameter options: Dictates how the search is executed. See `FuzzyMatchingOptionsParams` and `FuzzyMatchingOptionsDefaultValues` for details.
    - returns: An Int indicating where the fuzzy matched pattern can be found in the String.
    */
-  public func fuzzyMatchPattern(pattern:String, loc:Int? = 0, options:[String: Double]? = nil) -> Int? {
+  public func fuzzyMatchPattern(pattern:String, loc:Int? = 0, options:FuzzyMatchOptions? = nil) -> Int? {
     guard characters.count > 0 else { return nil }
     let generatedOptions = generateOptions(options)
     let location = max(0, min(loc ?? 0, characters.count))
-    let threshold = generatedOptions[FuzzyMatchingOptionsParams.threshold.rawValue]!
-    let distance = generatedOptions[FuzzyMatchingOptionsParams.distance.rawValue]!
+    let threshold = generatedOptions.threshold
+    let distance = generatedOptions.distance
 
     if caseInsensitiveCompare(pattern) == NSComparisonResult.OrderedSame {
       return 0
@@ -219,24 +239,12 @@ extension String {
     return bestLoc != NSNotFound ? bestLoc : nil
   }
 
-  func generateOptions(options:[String:Double]?) -> [String: Double] {
-    var generatedOptions = defaultOptions()
+  func generateOptions(options:FuzzyMatchOptions?) -> FuzzyMatchOptions {
     if let unwrappedOptions = options {
-      if let threshold = unwrappedOptions[FuzzyMatchingOptionsParams.threshold.rawValue] {
-        generatedOptions[FuzzyMatchingOptionsParams.threshold.rawValue] = threshold
-      }
-      if let distance = unwrappedOptions[FuzzyMatchingOptionsParams.distance.rawValue] {
-        generatedOptions[FuzzyMatchingOptionsParams.distance.rawValue] = distance
-      }
+      return unwrappedOptions
+    } else {
+      return FuzzyMatchOptions.init()
     }
-    return generatedOptions
-  }
-
-  func defaultOptions() -> [String: Double] {
-    return [
-      FuzzyMatchingOptionsParams.threshold.rawValue : FuzzyMatchingOptionsDefaultValues.threshold.rawValue,
-      FuzzyMatchingOptionsParams.distance.rawValue : FuzzyMatchingOptionsDefaultValues.distance.rawValue
-    ]
   }
 
   func maxOfConstAndDiff(a:Int, b:Int, c:Int) -> Int {

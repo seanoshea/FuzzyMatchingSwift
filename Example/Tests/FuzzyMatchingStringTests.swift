@@ -36,13 +36,13 @@ class FuzzyMatchingStringTests: XCTestCase {
   }
 
   func testWithThresholdOptions() {
-    let options = [FuzzyMatchingOptionsParams.threshold.rawValue : 1.0]
+    let options = FuzzyMatchOptions.init(threshold: 1.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
   }
 
   func testWithDistanceOptions() {
-    let options = [FuzzyMatchingOptionsParams.distance.rawValue : 1.0]
+    let options = FuzzyMatchOptions.init(threshold: FuzzyMatchingOptionsDefaultValues.threshold.rawValue, distance: 1.0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc:0, options:options) == nil)
   }
