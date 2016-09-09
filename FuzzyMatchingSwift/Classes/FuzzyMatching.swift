@@ -238,8 +238,6 @@ extension String {
       if let possibleBackwardsSearchRange = rangeOfString(pattern, options:NSStringCompareOptions.BackwardsSearch, range:range, locale: NSLocale.currentLocale()) {
         bestLoc = startIndex.distanceTo(possibleBackwardsSearchRange.startIndex)
         scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), scoreThreshold)
-      } else {
-        bestLoc = NSNotFound
       }
     }
     return (bestLoc, threshold)
