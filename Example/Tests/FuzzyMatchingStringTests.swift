@@ -18,19 +18,31 @@
 import XCTest
 
 import FuzzyMatchingSwift
+@testable import FuzzyMatchingSwift
 
 class FuzzyMatchingStringTests: XCTestCase {
 
   func testWithoutOptions() {
+    XCTAssertTrue("".fuzzyMatchPattern("") == nil)
+    XCTAssertTrue(" ".fuzzyMatchPattern(" ") == 0)
+    XCTAssertTrue(" ".fuzzyMatchPattern("\\v") == nil)
+    XCTAssertTrue(" ".fuzzyMatchPattern("\\r") == nil)
+    XCTAssertTrue(" ".fuzzyMatchPattern("\\t") == nil)
+    
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("è") == nil)
+    XCTAssertTrue("èèèèèè".fuzzyMatchPattern("e") == nil)
+    XCTAssertTrue("pie".fuzzyMatchPattern("π") == nil)
+    
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef") == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:nil) == 0)
-    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1, options:nil) == nil)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3, options:nil) == nil)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3, options:nil) == 3)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4, options:nil) == 4)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0, options:nil) == 0)
-    XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5, options:nil) == 5)
-    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30, options:nil) == 30)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0) == 0)
+    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3) == 3)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4) == 4)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0) == 0)
+    XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5) == 5)
+    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30) == 30)
+    
     XCTAssertTrue("🐶".fuzzyMatchPattern("🐶") == 0)
     XCTAssertTrue("🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") == 1)
   }
@@ -45,5 +57,29 @@ class FuzzyMatchingStringTests: XCTestCase {
     let options = FuzzyMatchOptions.init(threshold: FuzzyMatchingOptionsDefaultValues.threshold.rawValue, distance: 1.0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc:0, options:options) == nil)
+  }
+  
+  func testSpeedUpBySearchingForSubstringFound() {
+    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("bc", loc:0, threshold:0.5, distance:1000.0)
+    XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == 1)
+    XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
+  }
+  
+  func testSpeedUpBySearchingForSubstringFoundDoubleByte() {
+    let speedUpBySearchingForSubstring = "🐶🐱🐶🐶🐶".speedUpBySearchingForSubstring("🐱", loc:0, threshold:0.5, distance:1000.0)
+    XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == 1)
+    XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
+  }
+  
+  func testSpeedUpBySearchingForSubstringNotFound() {
+    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("ggg", loc:0, threshold:0.5, distance:1000.0)
+    XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == NSNotFound)
+    XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
+  }
+  
+  func testSpeedUpBySearchingForSubstringNotFoundDoubleByte() {
+    let speedUpBySearchingForSubstring = "🐱🐱🐱".speedUpBySearchingForSubstring("🐭", loc:0, threshold:0.5, distance:1000.0)
+    XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == NSNotFound)
+    XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
 }
