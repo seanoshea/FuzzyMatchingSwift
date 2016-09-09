@@ -67,4 +67,11 @@ class FuzzyMatchingArrayTests: XCTestCase {
     
     XCTAssert(third == first)
   }
+  
+  func testPerformance() {
+    measureMetrics(self.dynamicType.defaultPerformanceMetrics(), automaticallyStartMeasuring:true, forBlock:{
+      ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
+      self.stopMeasuring()
+    });
+  }
 }
