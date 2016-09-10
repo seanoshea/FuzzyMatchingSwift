@@ -48,22 +48,22 @@ class FuzzyMatchingArrayTests: XCTestCase {
   
   func testMatchingStringsInArraysWithOptions() {
     let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
-    let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 10, distance: 1.0)
+    let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1.0)
     let third = ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
     
     XCTAssert(first[0] == "one")
     XCTAssert(first[1] == "two")
     
-    XCTAssert(second[0] == "two")
-    XCTAssert(second[1] == "seven")
-    XCTAssert(second[2] == "ten")
-    XCTAssert(second[3] == "one")
-    XCTAssert(second[4] == "three")
-    XCTAssert(second[5] == "four")
-    XCTAssert(second[6] == "five")
-    XCTAssert(second[7] == "six")
+    XCTAssert(second[0] == "one")
+    XCTAssert(second[1] == "nine")
+    XCTAssert(second[2] == "two")
+    XCTAssert(second[3] == "three")
+    XCTAssert(second[4] == "four")
+    XCTAssert(second[5] == "five")
+    XCTAssert(second[6] == "six")
+    XCTAssert(second[7] == "seven")
     XCTAssert(second[8] == "eight")
-    XCTAssert(second[9] == "nine")
+    XCTAssert(second[9] == "ten")
     
     XCTAssert(third == first)
   }

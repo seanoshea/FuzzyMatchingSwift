@@ -21,7 +21,7 @@ import FuzzyMatchingSwift
 @testable import FuzzyMatchingSwift
 
 class FuzzyMatchingStringTests: XCTestCase {
-
+  
   func testWithoutOptions() {
     XCTAssertTrue("".fuzzyMatchPattern("") == nil)
     XCTAssertTrue(" ".fuzzyMatchPattern(" ") == 0)
@@ -38,19 +38,28 @@ class FuzzyMatchingStringTests: XCTestCase {
     XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1) == nil)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3) == nil)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("de", loc:3) == 3)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4) == 4)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("defy", loc:4) == 3)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0) == 0)
-    XCTAssertTrue("I am the very model of a modern major general.".fuzzyMatchPattern(" that berry ", loc:5) == 5)
-    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30) == 30)
     
     XCTAssertTrue("🐶".fuzzyMatchPattern("🐶") == 0)
     XCTAssertTrue("🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") == 1)
   }
 
-  func testWithThresholdOptions() {
-    let options = FuzzyMatchOptions.init(threshold: 1.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
+  func testWithStrongThresholdOptions() {
+    let options = FuzzyMatchOptions.init(threshold: 0.0, distance: 0)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
+    XCTAssertTrue("a large block of text with no occurance of the last two letters of the alphabet".fuzzyMatchPattern("yz", loc:0, options:options) == nil)
+    XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc:0, options:options) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
+    XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc:0, options:options) == nil)
+  }
+  
+  func testWithWeakThresholdOptions() {
+    var options = FuzzyMatchOptions.init(threshold: 1.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
+    options.threshold = 0.8
+    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30) == 23)
   }
 
   func testWithDistanceOptions() {
