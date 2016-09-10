@@ -67,7 +67,7 @@ extension _ArrayType where Generator.Element == String {
    - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
    */
-  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = 1000.0) -> [String] {
+  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
     var sortedArray = [String]()
     for element in 10.stride(to: 1, by: -1) {
       // stop if we've already found all there is to find
