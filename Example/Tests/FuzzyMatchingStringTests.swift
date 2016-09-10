@@ -46,12 +46,11 @@ class FuzzyMatchingStringTests: XCTestCase {
   }
 
   func testWithStrongThresholdOptions() {
-    let options = FuzzyMatchOptions.init(threshold: 0.0, distance: 0)
+    let options = FuzzyMatchOptions.init(threshold: 0.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
     XCTAssertTrue("a large block of text with no occurance of the last two letters of the alphabet".fuzzyMatchPattern("yz", loc:0, options:options) == nil)
     XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc:0, options:options) == nil)
     XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
-    XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc:0, options:options) == nil)
   }
   
   func testWithWeakThresholdOptions() {
