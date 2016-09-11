@@ -69,11 +69,11 @@ extension _ArrayType where Generator.Element == String {
    */
   public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
     var sortedArray = [String]()
-    for element in 10.stride(to: 1, by: -1) {
+    for element in 1.stride(to: 10, by: 1) {
       // stop if we've already found all there is to find
       if sortedArray.count == count { break }
       // otherwise, proceed to the rest of the values
-      var options = FuzzyMatchOptions.init(threshold:Double(element / 10), distance:FuzzyMatchingOptionsDefaultValues.distance.rawValue)
+      var options = FuzzyMatchOptions.init(threshold:Double(Double(element) / Double(10)), distance:FuzzyMatchingOptionsDefaultValues.distance.rawValue)
       if let unwrappedDistance = distance {
         options.distance = unwrappedDistance
       }

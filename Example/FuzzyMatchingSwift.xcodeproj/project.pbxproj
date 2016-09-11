@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
+		418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 418322D31D86124C00A6EFAC /* desolation_row.txt */; };
 		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
 		AD1DDA8BEC05E6E7B53F0C9D /* Pods_FuzzyMatchingSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -16,6 +17,7 @@
 		17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		256F5E07F5B85BDB335F6D31 /* FuzzyMatchingSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FuzzyMatchingSwift.podspec; path = ../FuzzyMatchingSwift.podspec; sourceTree = "<group>"; };
 		4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingArrayTests.swift; sourceTree = "<group>"; };
+		418322D31D86124C00A6EFAC /* desolation_row.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desolation_row.txt; sourceTree = "<group>"; };
 		41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingStringTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* FuzzyMatchingSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMatchingSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEA1AFB9204008FA782 /* Info.plist */,
+				418322D31D86124C00A6EFAC /* desolation_row.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

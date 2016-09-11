@@ -29,7 +29,7 @@ Returns a new instance of an Array which is sorted by the closest fuzzy match. D
 ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "two", "three"]
 ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
-// returns ["one", "nine", "two", "three", "four", "five", "six", "seven", "eight", "ten"]
+// returns ["one", "nine", "two", "four", "seven", "ten", "three", "five", "six", "eight"]
 ["one", "one", "two"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "one", "two"]
 ```
