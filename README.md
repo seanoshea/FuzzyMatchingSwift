@@ -35,7 +35,7 @@ Returns a new instance of an Array which is sorted by the closest fuzzy match. D
 ```
 
 ### Providing a confidence level
-A confidence level allows client code to understand how likely the fuzzy searching algorithm is to find a pattern within a host String. `confidenceScore` returns a Double which indicates how confident we are that the pattern can be found in the host String. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to
+A confidence level allows client code to understand how likely the fuzzy searching algorithm is to find a pattern within a host String. `confidenceScore` returns a Double which indicates how confident we are that the pattern can be found in the host String. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to be found.
 ```swift
 "Stacee Lima".confidenceScore("SL") // returns 0.5
 "abcdef".confidenceScore("g") // returns nil
