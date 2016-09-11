@@ -101,6 +101,30 @@ extension _ArrayType where Generator.Element == String {
 extension String {
 
   /**
+   Provides a confidence score relating to how likely the pattern is to be found in the host string.
+   
+   - parameter pattern: The pattern to search for.
+   - parameter loc: The index in the element from which to search.
+   - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
+   - returns: A Double which indicates how confident we are that the pattern can be found in the host string. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to be found
+   */
+  func confidenceScore(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> Double? {
+    // start at a low threshold and work our way up
+    for index in 1.stride(to: 1000, by: 1) {
+      let threshold:Double = Double(Double(index) / Double(1000))
+      var d = FuzzyMatchingOptionsDefaultValues.distance.rawValue
+      if let unwrappedDistance = distance {
+        d = unwrappedDistance
+      }
+      let options = FuzzyMatchOptions.init(threshold: threshold, distance: d)
+      if self.fuzzyMatchPattern(pattern, loc: loc, options: options) != nil {
+        return threshold
+      }
+    }
+    return nil
+  }
+  
+  /**
    Executes a fuzzy match on the String using the `pattern` parameter.
    
    - parameter pattern: The pattern to search for.
