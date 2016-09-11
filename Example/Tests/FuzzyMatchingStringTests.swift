@@ -96,9 +96,28 @@ class FuzzyMatchingStringTests: XCTestCase {
     let two = "abcdef".confidenceScore("g")
     let three = "🐶🐱🐶🐶🐶".confidenceScore("🐱")
     let four = "🐶🐱🐶🐶🐶".confidenceScore("🐱🐱🐱🐱🐱")
+    
     XCTAssertTrue(one == 0.5)
     XCTAssertTrue(two == nil)
     XCTAssertTrue(three == 0.001)
     XCTAssertTrue(four == 0.8)
+  }
+  
+  func testLongerText() {
+    let path = NSBundle(forClass: self.dynamicType).pathForResource("desolation_row", ofType: "txt")!
+    let desolationRow = String.init(data: NSData(contentsOfFile: path)!, encoding: NSUTF8StringEncoding)!
+    
+    let firstWord = desolationRow.fuzzyMatchPattern("They're")
+    let secondWord = desolationRow.fuzzyMatchPattern("selling")
+    let secondLine = desolationRow.fuzzyMatchPattern("The beauty parlor")
+    
+    let options = FuzzyMatchOptions.init(threshold:0.5, distance:Double(10000))
+    
+    let eliot = desolationRow.fuzzyMatchPattern("T.S. Eliot", loc: 0, options: options)
+    
+    XCTAssertTrue(firstWord == 0)
+    XCTAssertTrue(secondWord == 8)
+    XCTAssertTrue(secondLine == 79)
+    XCTAssertTrue(eliot == 3061)
   }
 }

@@ -30,10 +30,10 @@ class FuzzyMatchingArrayTests: XCTestCase {
     XCTAssert(first.count == 3)
       
     XCTAssert(second[0] == "one")
-    XCTAssert(second[1] == "two")
-    XCTAssert(second[2] == "four")
-    XCTAssert(second[3] == "seven")
-    XCTAssert(second[4] == "nine")
+    XCTAssert(second[1] == "nine")
+    XCTAssert(second[2] == "two")
+    XCTAssert(second[3] == "four")
+    XCTAssert(second[4] == "seven")
     XCTAssert(second[5] == "ten")
     XCTAssert(second.count == 10)
     
@@ -67,6 +67,17 @@ class FuzzyMatchingArrayTests: XCTestCase {
     
     XCTAssert(third == first)
   }
+//  
+//  func testLongArray() {
+//    let path = NSBundle(forClass: self.dynamicType).pathForResource("desolation_row", ofType: "txt")!
+//    let desolationRow = String.init(data: NSData(contentsOfFile: path)!, encoding: NSUTF8StringEncoding)!
+//    let array = desolationRow.characters.split{$0 == " "}.map(String.init)
+//
+//    let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
+//    
+//    XCTAssertTrue(array.count == resultantArray.count)
+//    
+//  }
   
   func testPerformance() {
     measureMetrics(self.dynamicType.defaultPerformanceMetrics(), automaticallyStartMeasuring:true, forBlock:{
