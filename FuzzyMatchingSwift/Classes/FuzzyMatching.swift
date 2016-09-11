@@ -21,7 +21,7 @@ import Foundation
  Allows client code to pass parameters to the `fuzzyMatchPattern` calls.
  */
 public struct FuzzyMatchOptions {
-  // defines how strict you want to be when fuzzy matching. A value of 1.0 equals to an exact match. A value of 0.1 indicates a very loose understanding of whether a match has been found.
+  // defines how strict you want to be when fuzzy matching. A value of 0.0 is equivalent to an exact match. A value of 1.0 indicates a very loose understanding of whether a match has been found.
   var threshold:Double = FuzzyMatchingOptionsDefaultValues.threshold.rawValue
   // defines where in the host String to look for the pattern
   var distance:Double = FuzzyMatchingOptionsDefaultValues.distance.rawValue
@@ -63,11 +63,11 @@ extension _ArrayType where Generator.Element == String {
    Iterates over all elements in the array and executes a fuzzy match using the `pattern` parameter.
    
    - parameter pattern: The pattern to search for.
-   - parameter loc: The index in the element from which to search.
+   - parameter loc: defines the approximate position in the text where the pattern is expected to be found.
    - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
    */
-  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = 1000.0) -> [String] {
+  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
     var sortedArray = [String]()
     for element in 10.stride(to: 1, by: -1) {
       // stop if we've already found all there is to find
@@ -218,7 +218,7 @@ extension String {
   }
   
   func bitapScoreForErrorCount(e:Int, x:Int, loc:Int, pattern:String, distance:Double) -> Double {
-    let accuracy = e / pattern.characters.count
+    let accuracy:Double = Double(e) / Double(pattern.characters.count)
     let proximity = abs(loc - x)
     if distance == 0 {
       return Double(proximity == 0 ? accuracy : 1)
