@@ -108,7 +108,7 @@ extension String {
    - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: A Double which indicates how confident we are that the pattern can be found in the host string. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to be found
    */
-  func confidenceScore(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> Double? {
+  public func confidenceScore(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> Double? {
     // start at a low threshold and work our way up
     for index in 1.stride(to: 1000, by: 1) {
       let threshold:Double = Double(Double(index) / Double(1000))
