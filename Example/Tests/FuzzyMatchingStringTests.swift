@@ -90,4 +90,15 @@ class FuzzyMatchingStringTests: XCTestCase {
     XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == NSNotFound)
     XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
+  
+  func testConfidence() {
+    let one = "Stacee Lima".confidenceScore("SL")
+    let two = "abcdef".confidenceScore("g")
+    let three = "🐶🐱🐶🐶🐶".confidenceScore("🐱")
+    let four = "🐶🐱🐶🐶🐶".confidenceScore("🐱🐱🐱🐱🐱")
+    XCTAssertTrue(one == 0.5)
+    XCTAssertTrue(two == nil)
+    XCTAssertTrue(three == 0.001)
+    XCTAssertTrue(four == 0.8)
+  }
 }

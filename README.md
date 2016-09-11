@@ -20,7 +20,11 @@ The majority of the fuzzy matching logic included in this project is taken from 
 "🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") // returns 1
 // arrays
 ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
-// returns ["one", "two", "four", "seven", "nine", "ten", "three", "five", "six", "eight"]
+// returns ["one", "nine", "two", "three", "four", "five", "six", "seven", "eight", "ten"]
+// confidence
+"Stacee Lima".confidenceScore("SL") // returns 0.5
+"abcdef".confidenceScore("g") // returns nil
+"🐶🐱🐶🐶🐶".confidenceScore("🐱") // returns 0.001
 ```
 
 ## Documentation
