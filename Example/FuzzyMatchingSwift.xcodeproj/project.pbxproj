@@ -13,9 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A0ACD817720B6A84B49FED6 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		189D90DDCF5336C8099E2CB8 /* Pods_FuzzyMatchingSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		256F5E07F5B85BDB335F6D31 /* FuzzyMatchingSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FuzzyMatchingSwift.podspec; path = ../FuzzyMatchingSwift.podspec; sourceTree = "<group>"; };
 		4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingArrayTests.swift; sourceTree = "<group>"; };
 		41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingStringTests.swift; sourceTree = "<group>"; };
@@ -25,7 +23,6 @@
 		84FADEDD62522C0848C6D00A /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E61241DCC9F8465E048758E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B55C5AA77549D0F519FA9CAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BBB02C9A8B145A11ACCF1BBC /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +40,6 @@
 		520E37843A0BF193729D10D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBB02C9A8B145A11ACCF1BBC /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */,
-				0A0ACD817720B6A84B49FED6 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */,
 				84FADEDD62522C0848C6D00A /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */,
 				17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */,
 			);
@@ -101,7 +96,6 @@
 		95698902573F55A239B74D1D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				189D90DDCF5336C8099E2CB8 /* Pods_FuzzyMatchingSwift_Example.framework */,
 				72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */,
 			);
 			name = Frameworks;
