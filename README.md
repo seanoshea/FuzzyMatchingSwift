@@ -13,15 +13,30 @@ The majority of the fuzzy matching logic included in this project is taken from 
 
 ## Usage
 
+### Matching on Strings
+`FuzzyMatchOptions` can be passed to any of these methods to alter how the strict or loose the fuzzy matching algorithm operates.
+- `threshold` in `FuzzyMatchOptions` defines how strict you want to be when fuzzy matching. A value of 0.0 is equivalent to an exact match. A value of 1.0 indicates a very loose understanding of whether a match has been found.
+- `distance` in `FuzzyMatchOptions` defines where in the host String to look for the pattern.
 ```swift
-// strings
 "abcdef".fuzzyMatchPattern("ab") // returns 0
 "abcdef".fuzzyMatchPattern("z") // returns nil
 "🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") // returns 1
-// arrays
+```
+
+### Matching on Arrays of Strings
+Returns a new instance of an Array which is sorted by the closest fuzzy match. Does not sort the host Array in place.
+```swift
+["one", "two", "three"].sortedByFuzzyMatchPattern("on")
+// returns ["one", "two", "three"]
 ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "nine", "two", "three", "four", "five", "six", "seven", "eight", "ten"]
-// confidence
+["one", "one", "two"].sortedByFuzzyMatchPattern("on")
+// returns ["one", "one", "two"]
+```
+
+### Providing a confidence level
+A confidence level allows client code to understand how likely the fuzzy searching algorithm is to find a pattern within a host String. `confidenceScore` returns a Double which indicates how confident we are that the pattern can be found in the host String. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to
+```swift
 "Stacee Lima".confidenceScore("SL") // returns 0.5
 "abcdef".confidenceScore("g") // returns nil
 "🐶🐱🐶🐶🐶".confidenceScore("🐱") // returns 0.001
