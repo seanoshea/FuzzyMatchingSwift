@@ -50,7 +50,9 @@ public struct FuzzyMatchOptions {
  Defines constants which are used if no `options` parameters are passed to `fuzzyMatchPattern` calls.
  */
 public enum FuzzyMatchingOptionsDefaultValues : Double {
+  // Default threshold value. Defines how strict you want to be when fuzzy matching. A value of 0.0 is equivalent to an exact match. A value of 1.0 indicates a very loose understanding of whether a match has been found.
   case threshold = 0.5
+  // Default distance value. Defines where in the host String to look for the pattern.
   case distance = 1000.0
 }
 
