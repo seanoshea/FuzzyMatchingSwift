@@ -68,6 +68,7 @@ extension _ArrayType where Generator.Element == String {
    - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
    */
   public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
+    var indexesAdded = [Int]()
     var sortedArray = [String]()
     for element in 1.stride(to: 10, by: 1) {
       // stop if we've already found all there is to find
@@ -77,17 +78,18 @@ extension _ArrayType where Generator.Element == String {
       if let unwrappedDistance = distance {
         options.distance = unwrappedDistance
       }
-      for value in self {
-        if !sortedArray.contains(value) {
+      for (index, value) in self.enumerate() {
+        if !indexesAdded.contains(index) {
           if let _ = value.fuzzyMatchPattern(pattern, loc: loc, options: options) {
             sortedArray.append(value)
+            indexesAdded.append(index)
           }
         }
       }
     }
     // make sure that the array we return to the user has ALL elements which is in the initial array
-    for value in self {
-      if !sortedArray.contains(value) {
+    for (index, value) in self.enumerate() {
+      if !indexesAdded.contains(index) {
         sortedArray.append(value)
       }
     }

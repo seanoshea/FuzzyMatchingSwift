@@ -24,7 +24,7 @@ The majority of the fuzzy matching logic included in this project is taken from 
 ```
 
 ### Matching on Arrays of Strings
-Returns a new instance of an Array which is sorted by the closest fuzzy match. Does not sort the host Array in place.
+Returns a new instance of an Array which is sorted by the closest fuzzy match. Does not sort the host Array in place. Will always return the same number of elements that are found in the host Array.
 ```swift
 ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "two", "three"]
@@ -40,6 +40,7 @@ A confidence level allows client code to understand how likely the fuzzy searchi
 "Stacee Lima".confidenceScore("SL") // returns 0.5
 "abcdef".confidenceScore("g") // returns nil
 "🐶🐱🐶🐶🐶".confidenceScore("🐱") // returns 0.001
+"🐶🐱🐶🐶🐶".confidenceScore("🐱🐱🐱🐱🐱") // returns 0.8
 ```
 
 ## Documentation
