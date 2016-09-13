@@ -7,27 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4127E3F81D87A77400901530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127E3F71D87A77400901530 /* AppDelegate.swift */; };
+		4127E3FA1D87A77400901530 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127E3F91D87A77400901530 /* ViewController.swift */; };
+		4127E3FD1D87A77400901530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FB1D87A77400901530 /* Main.storyboard */; };
+		4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FE1D87A77400901530 /* Assets.xcassets */; };
+		4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E4001D87A77400901530 /* LaunchScreen.storyboard */; };
 		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
 		418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 418322D31D86124C00A6EFAC /* desolation_row.txt */; };
 		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
 		AD1DDA8BEC05E6E7B53F0C9D /* Pods_FuzzyMatchingSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */; };
+		CAEFC4C95B6722F607750340 /* Pods_FuzzyMatchingSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD37D97AF17DAC3E3DB8AF62 /* Pods_FuzzyMatchingSwift_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		256F5E07F5B85BDB335F6D31 /* FuzzyMatchingSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FuzzyMatchingSwift.podspec; path = ../FuzzyMatchingSwift.podspec; sourceTree = "<group>"; };
+		4127E3F51D87A77400901530 /* FuzzyMatchingSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMatchingSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4127E3F71D87A77400901530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4127E3F91D87A77400901530 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4127E3FC1D87A77400901530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4127E3FE1D87A77400901530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4127E4011D87A77400901530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4127E4031D87A77400901530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingArrayTests.swift; sourceTree = "<group>"; };
 		418322D31D86124C00A6EFAC /* desolation_row.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desolation_row.txt; sourceTree = "<group>"; };
 		41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingStringTests.swift; sourceTree = "<group>"; };
+		5242686A2F432C4AD965A733 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* FuzzyMatchingSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMatchingSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FADEDD62522C0848C6D00A /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		898F46877AAB0BCD477D7666 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMatchingSwift_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9E61241DCC9F8465E048758E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B55C5AA77549D0F519FA9CAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BD37D97AF17DAC3E3DB8AF62 /* Pods_FuzzyMatchingSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4127E3F21D87A77400901530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAEFC4C95B6722F607750340 /* Pods_FuzzyMatchingSwift_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE21AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,11 +63,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4127E3F61D87A77400901530 /* FuzzyMatchingSwift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4127E3F71D87A77400901530 /* AppDelegate.swift */,
+				4127E3F91D87A77400901530 /* ViewController.swift */,
+				4127E3FB1D87A77400901530 /* Main.storyboard */,
+				4127E3FE1D87A77400901530 /* Assets.xcassets */,
+				4127E4001D87A77400901530 /* LaunchScreen.storyboard */,
+				4127E4031D87A77400901530 /* Info.plist */,
+			);
+			path = FuzzyMatchingSwift_Example;
+			sourceTree = "<group>";
+		};
 		520E37843A0BF193729D10D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				84FADEDD62522C0848C6D00A /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */,
 				17F6E8654F829CB087AEC96A /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */,
+				898F46877AAB0BCD477D7666 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */,
+				5242686A2F432C4AD965A733 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -52,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				4127E3F61D87A77400901530 /* FuzzyMatchingSwift_Example */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				520E37843A0BF193729D10D5 /* Pods */,
@@ -63,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACE51AFB9204008FA782 /* FuzzyMatchingSwift_Tests.xctest */,
+				4127E3F51D87A77400901530 /* FuzzyMatchingSwift_Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */,
+				BD37D97AF17DAC3E3DB8AF62 /* Pods_FuzzyMatchingSwift_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +149,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4127E3F41D87A77400901530 /* FuzzyMatchingSwift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4127E4061D87A77400901530 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift_Example" */;
+			buildPhases = (
+				42CF007AC14453F9FCA2BDCF /* [CP] Check Pods Manifest.lock */,
+				4127E3F11D87A77400901530 /* Sources */,
+				4127E3F21D87A77400901530 /* Frameworks */,
+				4127E3F31D87A77400901530 /* Resources */,
+				C0B506F0732799227BE99422 /* [CP] Embed Pods Frameworks */,
+				6170F86D01944F60C664DBC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuzzyMatchingSwift_Example;
+			productName = FuzzyMatchingSwift_Example;
+			productReference = 4127E3F51D87A77400901530 /* FuzzyMatchingSwift_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		607FACE41AFB9204008FA782 /* FuzzyMatchingSwift_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift_Tests" */;
@@ -133,10 +195,14 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					4127E3F41D87A77400901530 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -156,12 +222,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4127E3F41D87A77400901530 /* FuzzyMatchingSwift_Example */,
 				607FACE41AFB9204008FA782 /* FuzzyMatchingSwift_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4127E3F31D87A77400901530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */,
+				4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */,
+				4127E3FD1D87A77400901530 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE31AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +250,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		42CF007AC14453F9FCA2BDCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		53DBD1A65C25B043CCD67BEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +278,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6170F86D01944F60C664DBC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7EAE4482B7327D10A17F2C6C /* [CP] Embed Pods Frameworks */ = {
@@ -218,9 +325,33 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0B506F0732799227BE99422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4127E3F11D87A77400901530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4127E3FA1D87A77400901530 /* ViewController.swift in Sources */,
+				4127E3F81D87A77400901530 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,7 +363,67 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		4127E3FB1D87A77400901530 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4127E3FC1D87A77400901530 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4127E4001D87A77400901530 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4127E4011D87A77400901530 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		4127E4041D87A77400901530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898F46877AAB0BCD477D7666 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = FuzzyMatchingSwift_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		4127E4051D87A77400901530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5242686A2F432C4AD965A733 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = FuzzyMatchingSwift_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -246,8 +437,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -294,8 +487,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -315,6 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(FRAMEWORK_SEARCH_PATHS)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -336,6 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -352,12 +549,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4127E4061D87A77400901530 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4127E4041D87A77400901530 /* Debug */,
+				4127E4051D87A77400901530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FuzzyMatchingSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
