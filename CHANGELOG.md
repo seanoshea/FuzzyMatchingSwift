@@ -1,3 +1,9 @@
+# Version 0.4.0
+
+- Improved accuracy in fuzzy matching.
+- Corrected fuzzy matching thresholding in `sortedByFuzzyMatchPattern`
+- Documentation and unit test improvements.
+
 # Version 0.3.0
 
 - Added confidence APIs.

@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name                      = 'FuzzyMatchingSwift'
-  s.version                   = '0.3.0'
+  s.version                   = '0.4.0'
   s.summary                   = 'Fuzzy matching String extensions.'
   s.description               = <<-DESC
-FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings.
+FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings and Arrays of Strings.
                        DESC
   s.homepage                  = 'https://github.com/seanoshea/FuzzyMatchingSwift'
   s.license                   = { :type => 'Apache 2', :file => 'LICENSE' }
