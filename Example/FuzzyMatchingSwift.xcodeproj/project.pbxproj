@@ -12,6 +12,10 @@
 		4127E3FD1D87A77400901530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FB1D87A77400901530 /* Main.storyboard */; };
 		4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FE1D87A77400901530 /* Assets.xcassets */; };
 		4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E4001D87A77400901530 /* LaunchScreen.storyboard */; };
+		4157B5EA1D88BDED00F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5E91D88BDED00F75180 /* Info.plist */; };
+		4157B5ED1D88BDF600F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EC1D88BDF600F75180 /* Info.plist */; };
+		4157B5F01D88BDFF00F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EF1D88BDFF00F75180 /* Info.plist */; };
+		4157B5F31D88BE0800F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5F21D88BE0800F75180 /* Info.plist */; };
 		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
 		418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 418322D31D86124C00A6EFAC /* desolation_row.txt */; };
 		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
@@ -29,6 +33,18 @@
 		4127E3FE1D87A77400901530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4127E4011D87A77400901530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4127E4031D87A77400901530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4157B5B41D88BAD800F75180 /* FuzzyMatchingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FuzzyMatchingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4157B5C11D88BB3400F75180 /* FuzzyMatchingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FuzzyMatchingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4157B5CE1D88BB7100F75180 /* FuzzyMatchingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FuzzyMatchingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4157B5DB1D88BBE900F75180 /* FuzzyMatchingSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FuzzyMatchingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4157B5E81D88BDED00F75180 /* FuzzyMatchingSwift-iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FuzzyMatchingSwift-iOS.h"; sourceTree = "<group>"; };
+		4157B5E91D88BDED00F75180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4157B5EB1D88BDF600F75180 /* FuzzyMatchingSwift-Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FuzzyMatchingSwift-Mac.h"; sourceTree = "<group>"; };
+		4157B5EC1D88BDF600F75180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4157B5EE1D88BDFF00F75180 /* FuzzyMatchingSwift-tvOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FuzzyMatchingSwift-tvOS.h"; sourceTree = "<group>"; };
+		4157B5EF1D88BDFF00F75180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4157B5F11D88BE0800F75180 /* FuzzyMatchingSwift-watchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FuzzyMatchingSwift-watchOS.h"; sourceTree = "<group>"; };
+		4157B5F21D88BE0800F75180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingArrayTests.swift; sourceTree = "<group>"; };
 		418322D31D86124C00A6EFAC /* desolation_row.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = desolation_row.txt; sourceTree = "<group>"; };
 		41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuzzyMatchingStringTests.swift; sourceTree = "<group>"; };
@@ -49,6 +65,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEFC4C95B6722F607750340 /* Pods_FuzzyMatchingSwift_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5B01D88BAD800F75180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5BD1D88BB3400F75180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5CA1D88BB7100F75180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5D71D88BBE900F75180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +120,53 @@
 			path = FuzzyMatchingSwift_Example;
 			sourceTree = "<group>";
 		};
+		4157B5E31D88BD8400F75180 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4157B5E41D88BD9F00F75180 /* iOS */,
+				4157B5E51D88BDA300F75180 /* macOS */,
+				4157B5E71D88BDB800F75180 /* tvOS */,
+				4157B5E61D88BDB000F75180 /* watchOS */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4157B5E41D88BD9F00F75180 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4157B5E81D88BDED00F75180 /* FuzzyMatchingSwift-iOS.h */,
+				4157B5E91D88BDED00F75180 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		4157B5E51D88BDA300F75180 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4157B5EB1D88BDF600F75180 /* FuzzyMatchingSwift-Mac.h */,
+				4157B5EC1D88BDF600F75180 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		4157B5E61D88BDB000F75180 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				4157B5F11D88BE0800F75180 /* FuzzyMatchingSwift-watchOS.h */,
+				4157B5F21D88BE0800F75180 /* Info.plist */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		4157B5E71D88BDB800F75180 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				4157B5EE1D88BDFF00F75180 /* FuzzyMatchingSwift-tvOS.h */,
+				4157B5EF1D88BDFF00F75180 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		520E37843A0BF193729D10D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +181,13 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				4127E3F61D87A77400901530 /* FuzzyMatchingSwift_Example */,
-				607FACE81AFB9204008FA782 /* Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
-				520E37843A0BF193729D10D5 /* Pods */,
 				95698902573F55A239B74D1D /* Frameworks */,
+				4127E3F61D87A77400901530 /* FuzzyMatchingSwift_Example */,
+				520E37843A0BF193729D10D5 /* Pods */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD11AFB9204008FA782 /* Products */,
+				4157B5E31D88BD8400F75180 /* Resources */,
+				607FACE81AFB9204008FA782 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +196,10 @@
 			children = (
 				607FACE51AFB9204008FA782 /* FuzzyMatchingSwift_Tests.xctest */,
 				4127E3F51D87A77400901530 /* FuzzyMatchingSwift_Example.app */,
+				4157B5B41D88BAD800F75180 /* FuzzyMatchingSwift.framework */,
+				4157B5C11D88BB3400F75180 /* FuzzyMatchingSwift.framework */,
+				4157B5CE1D88BB7100F75180 /* FuzzyMatchingSwift.framework */,
+				4157B5DB1D88BBE900F75180 /* FuzzyMatchingSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +244,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4157B5B11D88BAD800F75180 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5BE1D88BB3400F75180 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5CB1D88BB7100F75180 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5D81D88BBE900F75180 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		4127E3F41D87A77400901530 /* FuzzyMatchingSwift_Example */ = {
 			isa = PBXNativeTarget;
@@ -168,6 +295,78 @@
 			productName = FuzzyMatchingSwift_Example;
 			productReference = 4127E3F51D87A77400901530 /* FuzzyMatchingSwift_Example.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4157B5B31D88BAD800F75180 /* FuzzyMatchingSwift-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4157B5BB1D88BAD800F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-tvOS" */;
+			buildPhases = (
+				4157B5AF1D88BAD800F75180 /* Sources */,
+				4157B5B01D88BAD800F75180 /* Frameworks */,
+				4157B5B11D88BAD800F75180 /* Headers */,
+				4157B5B21D88BAD800F75180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FuzzyMatchingSwift-tvOS";
+			productName = "FuzzyMatchingSwift-tvOS";
+			productReference = 4157B5B41D88BAD800F75180 /* FuzzyMatchingSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4157B5C01D88BB3400F75180 /* FuzzyMatchingSwift-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4157B5C61D88BB3400F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-macOS" */;
+			buildPhases = (
+				4157B5BC1D88BB3400F75180 /* Sources */,
+				4157B5BD1D88BB3400F75180 /* Frameworks */,
+				4157B5BE1D88BB3400F75180 /* Headers */,
+				4157B5BF1D88BB3400F75180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FuzzyMatchingSwift-macOS";
+			productName = "FuzzyMatchingSwift-macOS";
+			productReference = 4157B5C11D88BB3400F75180 /* FuzzyMatchingSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4157B5CD1D88BB7100F75180 /* FuzzyMatchingSwift-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4157B5D31D88BB7100F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-watchOS" */;
+			buildPhases = (
+				4157B5C91D88BB7100F75180 /* Sources */,
+				4157B5CA1D88BB7100F75180 /* Frameworks */,
+				4157B5CB1D88BB7100F75180 /* Headers */,
+				4157B5CC1D88BB7100F75180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FuzzyMatchingSwift-watchOS";
+			productName = "FuzzyMatchingSwift-watchOS";
+			productReference = 4157B5CE1D88BB7100F75180 /* FuzzyMatchingSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4157B5DA1D88BBE900F75180 /* FuzzyMatchingSwift-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4157B5E01D88BBE900F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-iOS" */;
+			buildPhases = (
+				4157B5D61D88BBE900F75180 /* Sources */,
+				4157B5D71D88BBE900F75180 /* Frameworks */,
+				4157B5D81D88BBE900F75180 /* Headers */,
+				4157B5D91D88BBE900F75180 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FuzzyMatchingSwift-iOS";
+			productName = "FuzzyMatchingSwift-iOS";
+			productReference = 4157B5DB1D88BBE900F75180 /* FuzzyMatchingSwift.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		607FACE41AFB9204008FA782 /* FuzzyMatchingSwift_Tests */ = {
 			isa = PBXNativeTarget;
@@ -203,6 +402,22 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					4157B5B31D88BAD800F75180 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					4157B5C01D88BB3400F75180 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					4157B5CD1D88BB7100F75180 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					4157B5DA1D88BBE900F75180 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
@@ -224,6 +439,10 @@
 			targets = (
 				4127E3F41D87A77400901530 /* FuzzyMatchingSwift_Example */,
 				607FACE41AFB9204008FA782 /* FuzzyMatchingSwift_Tests */,
+				4157B5DA1D88BBE900F75180 /* FuzzyMatchingSwift-iOS */,
+				4157B5C01D88BB3400F75180 /* FuzzyMatchingSwift-macOS */,
+				4157B5B31D88BAD800F75180 /* FuzzyMatchingSwift-tvOS */,
+				4157B5CD1D88BB7100F75180 /* FuzzyMatchingSwift-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -233,9 +452,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4157B5EA1D88BDED00F75180 /* Info.plist in Resources */,
 				4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */,
+				4157B5F01D88BDFF00F75180 /* Info.plist in Resources */,
 				4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */,
+				4157B5ED1D88BDF600F75180 /* Info.plist in Resources */,
 				4127E3FD1D87A77400901530 /* Main.storyboard in Resources */,
+				4157B5F31D88BE0800F75180 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5B21D88BAD800F75180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5BF1D88BB3400F75180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5CC1D88BB7100F75180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5D91D88BBE900F75180 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +603,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4157B5AF1D88BAD800F75180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5BC1D88BB3400F75180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5C91D88BB7100F75180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4157B5D61D88BBE900F75180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +700,232 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+		4157B5B91D88BAD800F75180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-tvOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4157B5BA1D88BAD800F75180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-tvOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4157B5C71D88BB3400F75180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-macOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4157B5C81D88BB3400F75180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-macOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4157B5D41D88BB7100F75180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-watchOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		4157B5D51D88BB7100F75180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-watchOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		4157B5E11D88BBE900F75180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-iOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4157B5E21D88BBE900F75180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.FuzzyMatchingSwift-iOS";
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -564,6 +1069,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4157B5BB1D88BAD800F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4157B5B91D88BAD800F75180 /* Debug */,
+				4157B5BA1D88BAD800F75180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4157B5C61D88BB3400F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4157B5C71D88BB3400F75180 /* Debug */,
+				4157B5C81D88BB3400F75180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4157B5D31D88BB7100F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4157B5D41D88BB7100F75180 /* Debug */,
+				4157B5D51D88BB7100F75180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4157B5E01D88BBE900F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4157B5E11D88BBE900F75180 /* Debug */,
+				4157B5E21D88BBE900F75180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FuzzyMatchingSwift" */ = {
 			isa = XCConfigurationList;

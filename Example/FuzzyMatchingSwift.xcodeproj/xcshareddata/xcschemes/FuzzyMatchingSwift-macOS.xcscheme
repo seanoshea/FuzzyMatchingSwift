@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "41F192771D7C6A8A008A01F8"
-               BuildableName = "FuzzyMatchingSwift.framework"
-               BlueprintName = "FuzzyMatchingSwift-watchOS"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "4157B5C01D88BB3400F75180"
+               BuildableName = "FuzzyMatchingSwift-macOS.framework"
+               BlueprintName = "FuzzyMatchingSwift-macOS"
+               ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41F192771D7C6A8A008A01F8"
-            BuildableName = "FuzzyMatchingSwift.framework"
-            BlueprintName = "FuzzyMatchingSwift-watchOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "4157B5C01D88BB3400F75180"
+            BuildableName = "FuzzyMatchingSwift-macOS.framework"
+            BlueprintName = "FuzzyMatchingSwift-macOS"
+            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41F192771D7C6A8A008A01F8"
-            BuildableName = "FuzzyMatchingSwift.framework"
-            BlueprintName = "FuzzyMatchingSwift-watchOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "4157B5C01D88BB3400F75180"
+            BuildableName = "FuzzyMatchingSwift-macOS.framework"
+            BlueprintName = "FuzzyMatchingSwift-macOS"
+            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
