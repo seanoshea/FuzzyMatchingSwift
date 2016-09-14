@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4157B5C01D88BB3400F75180"
-               BuildableName = "FuzzyMatchingSwift-macOS.framework"
+               BuildableName = "FuzzyMatchingSwift.framework"
                BlueprintName = "FuzzyMatchingSwift-macOS"
                ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4157B5C01D88BB3400F75180"
-            BuildableName = "FuzzyMatchingSwift-macOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-macOS"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4157B5C01D88BB3400F75180"
-            BuildableName = "FuzzyMatchingSwift-macOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-macOS"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>

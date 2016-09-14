@@ -12,13 +12,14 @@
 		4127E3FD1D87A77400901530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FB1D87A77400901530 /* Main.storyboard */; };
 		4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4127E3FE1D87A77400901530 /* Assets.xcassets */; };
 		4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4127E4001D87A77400901530 /* LaunchScreen.storyboard */; };
-		4157B5EA1D88BDED00F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5E91D88BDED00F75180 /* Info.plist */; };
-		4157B5ED1D88BDF600F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EC1D88BDF600F75180 /* Info.plist */; };
-		4157B5F01D88BDFF00F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EF1D88BDFF00F75180 /* Info.plist */; };
-		4157B5F31D88BE0800F75180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5F21D88BE0800F75180 /* Info.plist */; };
 		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
 		418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 418322D31D86124C00A6EFAC /* desolation_row.txt */; };
 		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
+		41F981B81D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4127E4031D87A77400901530 /* Info.plist */; };
+		41F981B91D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5E91D88BDED00F75180 /* Info.plist */; };
+		41F981BA1D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EC1D88BDF600F75180 /* Info.plist */; };
+		41F981BB1D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EF1D88BDFF00F75180 /* Info.plist */; };
+		41F981BC1D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5F21D88BE0800F75180 /* Info.plist */; };
 		AD1DDA8BEC05E6E7B53F0C9D /* Pods_FuzzyMatchingSwift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FF2310F943D8EA97CF6DFD /* Pods_FuzzyMatchingSwift_Tests.framework */; };
 		CAEFC4C95B6722F607750340 /* Pods_FuzzyMatchingSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD37D97AF17DAC3E3DB8AF62 /* Pods_FuzzyMatchingSwift_Example.framework */; };
 /* End PBXBuildFile section */
@@ -452,13 +453,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4157B5EA1D88BDED00F75180 /* Info.plist in Resources */,
+				41F981B81D88DA4B00187CE0 /* Info.plist in Resources */,
+				41F981B91D88DA4B00187CE0 /* Info.plist in Resources */,
+				41F981BA1D88DA4B00187CE0 /* Info.plist in Resources */,
+				41F981BB1D88DA4B00187CE0 /* Info.plist in Resources */,
+				41F981BC1D88DA4B00187CE0 /* Info.plist in Resources */,
 				4127E4021D87A77400901530 /* LaunchScreen.storyboard in Resources */,
-				4157B5F01D88BDFF00F75180 /* Info.plist in Resources */,
 				4127E3FF1D87A77400901530 /* Assets.xcassets in Resources */,
-				4157B5ED1D88BDF600F75180 /* Info.plist in Resources */,
 				4127E3FD1D87A77400901530 /* Main.storyboard in Resources */,
-				4157B5F31D88BE0800F75180 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,7 +767,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -795,7 +797,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1079,6 +1081,7 @@
 				4157B5BA1D88BAD800F75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4157B5C61D88BB3400F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-macOS" */ = {
 			isa = XCConfigurationList;
@@ -1087,6 +1090,7 @@
 				4157B5C81D88BB3400F75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4157B5D31D88BB7100F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1095,6 +1099,7 @@
 				4157B5D51D88BB7100F75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4157B5E01D88BBE900F75180 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift-iOS" */ = {
 			isa = XCConfigurationList;
@@ -1103,6 +1108,7 @@
 				4157B5E21D88BBE900F75180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FuzzyMatchingSwift" */ = {
 			isa = XCConfigurationList;

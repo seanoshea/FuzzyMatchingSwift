@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4157B5CD1D88BB7100F75180"
-               BuildableName = "FuzzyMatchingSwift-watchOS.framework"
+               BuildableName = "FuzzyMatchingSwift.framework"
                BlueprintName = "FuzzyMatchingSwift-watchOS"
                ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4157B5CD1D88BB7100F75180"
-            BuildableName = "FuzzyMatchingSwift-watchOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-watchOS"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4157B5CD1D88BB7100F75180"
-            BuildableName = "FuzzyMatchingSwift-watchOS.framework"
+            BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-watchOS"
             ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
