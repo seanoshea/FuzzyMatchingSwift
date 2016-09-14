@@ -17,7 +17,6 @@
 
 import XCTest
 
-import FuzzyMatchingSwift
 @testable import FuzzyMatchingSwift
 
 class FuzzyMatchingStringTests: XCTestCase {
