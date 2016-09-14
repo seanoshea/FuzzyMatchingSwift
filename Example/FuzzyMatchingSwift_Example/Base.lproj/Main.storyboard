@@ -18,17 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-hU-PIi">
-                                <frame key="frameInset" width="375" height="787"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-hU-PIi">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-D5-jso" userLabel="Sample Text Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-ZC-Tc8" userLabel="Sample Text View">
-                                        <rect key="frame" x="8" y="47" width="359" height="153"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pf-ZC-Tc8" userLabel="Sample Text View">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GEg-pu-2t7"/>
+                                        </constraints>
                                         <string key="text">'Twas brillig, and the slithy toves
 Did gyre and gimble in the wabe.
 All mimsy were the borogroves,
@@ -36,75 +37,63 @@ And the mome raths outgrabe.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fuzzy Pattern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcD-kF-gK1" userLabel="Fuzzy Pattern Label">
-                                        <rect key="frame" x="8" y="208" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzzy Pattern" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcD-kF-gK1" userLabel="Fuzzy Pattern Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="slimy tools" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irt-z0-PxW" userLabel="Fuzzy Pattern Field">
-                                        <rect key="frame" x="8" y="237" width="359" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="slimy tools" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irt-z0-PxW" userLabel="Fuzzy Pattern Field">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Aproximate pattern to search for in the text." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unf-zP-3pR" userLabel="Fuzzy Pattern Description Label">
-                                        <rect key="frame" x="8" y="271" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproximate pattern to search for in the text." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unf-zP-3pR" userLabel="Fuzzy Pattern Description Label">
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fuzzy Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-1a-UJp">
-                                        <rect key="frame" x="8" y="300" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzzy Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-1a-UJp">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSX-lI-M4K" userLabel="Fuzzy Location Field">
-                                        <rect key="frame" x="8" y="329" width="359" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSX-lI-M4K" userLabel="Fuzzy Location Field">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Aproximately where in the text is the pattern is expected to be found." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-ZJ-XrQ" userLabel="Fuzzy Location Description">
-                                        <rect key="frame" x="8" y="363" width="359" height="42"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aproximately where in the text is the pattern is expected to be found." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-ZJ-XrQ" userLabel="Fuzzy Location Description">
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fuzzy Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-7G-bmO" userLabel="Fuzzy Location Distance">
-                                        <rect key="frame" x="8" y="413" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzzy Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-7G-bmO" userLabel="Fuzzy Location Distance">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwE-OV-TN3" userLabel="Fuzzy Distance Label">
-                                        <rect key="frame" x="8" y="442" width="359" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwE-OV-TN3" userLabel="Fuzzy Distance Label">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V83-5G-5c0" userLabel="Fuzzy Distance Description">
-                                        <rect key="frame" x="8" y="480" width="359" height="132"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V83-5G-5c0" userLabel="Fuzzy Distance Description">
                                         <string key="text">Determines how close the match must be to the fuzzy location (specified above). An exact letter match which is 'distance' characters away from the fuzzy location would score as a complete mismatch. A distance of '0' requires the match be at the exact location specified, a threshold of '1000' would require a perfect match to be within 800 characters of the fuzzy location to be found using a 0.8 threshold.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Fuzzy Threshold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyH-Fd-7iP" userLabel="Fuzzy Distance Threshold">
-                                        <rect key="frame" x="8" y="620" width="359" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuzzy Threshold" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyH-Fd-7iP" userLabel="Fuzzy Distance Threshold">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.8" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-LR-ae1" userLabel="Fuzzy Threshold Field">
-                                        <rect key="frame" x="8" y="649" width="359" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.8" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-LR-ae1" userLabel="Fuzzy Threshold Field">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-cZ-9Ao" userLabel="Fuzzy Threshold Description">
-                                        <rect key="frame" x="9" y="683" width="358" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-cZ-9Ao" userLabel="Fuzzy Threshold Description">
                                         <string key="text">At what point does the match algorithm give up. A threshold of '0.0' requires a perfect match (of both letters and location), a threshold of '1.0' would match anything.
 
 </string>
@@ -112,13 +101,14 @@ And the mome raths outgrabe.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uze-lh-UQA" userLabel="Fuzzy Match Button">
-                                        <rect key="frame" x="8" y="712" width="359" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uze-lh-UQA" userLabel="Fuzzy Match Button">
                                         <state key="normal" title="Fuzzy Match"/>
+                                        <connections>
+                                            <action selector="fuzzyMatchButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSv-sH-Sbb"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Result appears here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2du-Ot-ChT" userLabel="Fuzzy Match Result">
-                                        <rect key="frame" x="8" y="750" width="359" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result appears here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2du-Ot-ChT" userLabel="Fuzzy Match Result">
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -136,6 +126,7 @@ And the mome raths outgrabe.</string>
                                     <constraint firstItem="1gK-D5-jso" firstAttribute="leading" secondItem="uaX-hU-PIi" secondAttribute="leading" constant="8" id="8Dg-O9-qVB"/>
                                     <constraint firstItem="RSX-lI-M4K" firstAttribute="leading" secondItem="uaX-hU-PIi" secondAttribute="leading" constant="8" id="8we-pH-n3B"/>
                                     <constraint firstItem="a7Z-LR-ae1" firstAttribute="leading" secondItem="uaX-hU-PIi" secondAttribute="leading" constant="8" id="9FF-he-EJd"/>
+                                    <constraint firstItem="7pf-ZC-Tc8" firstAttribute="centerX" secondItem="uaX-hU-PIi" secondAttribute="centerX" id="EHY-4R-CPq"/>
                                     <constraint firstItem="rSv-cZ-9Ao" firstAttribute="top" secondItem="a7Z-LR-ae1" secondAttribute="bottom" constant="4" id="Efs-Rt-LIW"/>
                                     <constraint firstItem="2du-Ot-ChT" firstAttribute="top" secondItem="uze-lh-UQA" secondAttribute="bottom" constant="8" id="GMT-bU-6B3"/>
                                     <constraint firstItem="1gK-D5-jso" firstAttribute="top" secondItem="uaX-hU-PIi" secondAttribute="top" constant="18" id="GPM-3e-CJ4"/>
@@ -153,6 +144,7 @@ And the mome raths outgrabe.</string>
                                     <constraint firstAttribute="bottom" secondItem="2du-Ot-ChT" secondAttribute="bottom" constant="16" id="Xf0-2h-Smi"/>
                                     <constraint firstItem="iwE-OV-TN3" firstAttribute="top" secondItem="WqB-7G-bmO" secondAttribute="bottom" constant="8" id="Yfa-as-JNY"/>
                                     <constraint firstItem="rSv-cZ-9Ao" firstAttribute="leading" secondItem="uaX-hU-PIi" secondAttribute="leading" constant="9" id="YvJ-AS-acf"/>
+                                    <constraint firstAttribute="height" constant="787" id="bZV-j8-iNl"/>
                                     <constraint firstItem="uze-lh-UQA" firstAttribute="top" secondItem="rSv-cZ-9Ao" secondAttribute="bottom" constant="8" id="eeM-oC-uGP"/>
                                     <constraint firstItem="iwE-OV-TN3" firstAttribute="leading" secondItem="uaX-hU-PIi" secondAttribute="leading" constant="8" id="fEt-Xm-koX"/>
                                     <constraint firstItem="a7Z-LR-ae1" firstAttribute="top" secondItem="qyH-Fd-7iP" secondAttribute="bottom" constant="8" id="gzl-gZ-rZy"/>
@@ -182,6 +174,14 @@ And the mome raths outgrabe.</string>
                             <constraint firstAttribute="trailing" secondItem="uaX-hU-PIi" secondAttribute="trailing" id="gtd-WK-tUQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fuzzyDistance" destination="iwE-OV-TN3" id="r5Z-Sh-CCC"/>
+                        <outlet property="fuzzyLocation" destination="RSX-lI-M4K" id="4df-HZ-5au"/>
+                        <outlet property="fuzzyMatchResult" destination="2du-Ot-ChT" id="8DR-vB-OkO"/>
+                        <outlet property="fuzzyPattern" destination="irt-z0-PxW" id="Cj9-Ir-Fra"/>
+                        <outlet property="fuzzySampleText" destination="7pf-ZC-Tc8" id="yQm-WB-JoX"/>
+                        <outlet property="fuzzyThreshold" destination="a7Z-LR-ae1" id="fYP-UQ-0PP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
