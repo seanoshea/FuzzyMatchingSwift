@@ -28,7 +28,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var fuzzyThreshold:UITextField!
   @IBOutlet weak var fuzzyMatchResult:UILabel!
   
-  @IBAction func fuzzyMatchButtonTappedWithSender(sender: UIButton) {
+  @IBAction func fuzzyMatchButtonTappedWithSender(_ sender: UIButton) {
     let threshold = Double(self.fuzzyThreshold.text!)!
     let distance = Double(self.fuzzyDistance.text!)!
     let sampleText = self.fuzzySampleText.text!
