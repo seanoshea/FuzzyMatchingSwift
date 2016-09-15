@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     let options = FuzzyMatchOptions.init(threshold: threshold, distance: distance)
     
     if let result = sampleText.fuzzyMatchPattern(pattern, loc:location, options:options) {
-      self.fuzzyMatchResult.text = "Fuzzy Match found at \(result)"
+      self.fuzzyMatchResult.text = "Found at \(result)"
     } else {
-      self.fuzzyMatchResult.text = "Not found"
+      self.fuzzyMatchResult.text = "Not Found"
     }
   }
 }
