@@ -104,19 +104,24 @@ class FuzzyMatchingStringTests: XCTestCase {
   
   func testLongerText() {
     let path = Bundle(for: type(of: self)).path(forResource: "desolation_row", ofType: "txt")!
-    let desolationRow = String.init(data: try! Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
-    
-    let firstWord = desolationRow.fuzzyMatchPattern("They're")
-    let secondWord = desolationRow.fuzzyMatchPattern("selling")
-    let secondLine = desolationRow.fuzzyMatchPattern("The beauty parlor")
-    
-    let options = FuzzyMatchOptions.init(threshold:0.5, distance:Double(10000))
-    
-    let eliot = desolationRow.fuzzyMatchPattern("T.S. Eliot", loc: 0, options: options)
-    
-    XCTAssertTrue(firstWord == 0)
-    XCTAssertTrue(secondWord == 8)
-    XCTAssertTrue(secondLine == 79)
-    XCTAssertTrue(eliot == 3061)
+    do {
+      let desolationRow = String.init(data: try Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
+      
+      let firstWord = desolationRow.fuzzyMatchPattern("They're")
+      let secondWord = desolationRow.fuzzyMatchPattern("selling")
+      let secondLine = desolationRow.fuzzyMatchPattern("The beauty parlor")
+      
+      let options = FuzzyMatchOptions.init(threshold:0.5, distance:Double(10000))
+      
+      let eliot = desolationRow.fuzzyMatchPattern("T.S. Eliot", loc: 0, options: options)
+      
+      XCTAssertTrue(firstWord == 0)
+      XCTAssertTrue(secondWord == 8)
+      XCTAssertTrue(secondLine == 79)
+      XCTAssertTrue(eliot == 3061)
+    }
+    catch _ {
+      XCTAssertTrue(1 == 0)
+    }
   }
 }

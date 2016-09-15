@@ -70,30 +70,34 @@ class FuzzyMatchingArrayTests: XCTestCase {
   
   func testLongArray() {
     let path = Bundle(for: type(of: self)).path(forResource: "desolation_row", ofType: "txt")!
-    let desolationRow = String.init(data: try! Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
-    let array = desolationRow.characters.split{$0 == " "}.map(String.init)
-
-    let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
-    
-    // 10 verses in this song
-    XCTAssert(resultantArray[0] == "Desolation")
-    XCTAssert(resultantArray[1] == "Desolation")
-    XCTAssert(resultantArray[2] == "Desolation")
-    XCTAssert(resultantArray[3] == "Desolation")
-    XCTAssert(resultantArray[4] == "Desolation")
-    XCTAssert(resultantArray[5] == "Desolation")
-    XCTAssert(resultantArray[6] == "Desolation")
-    XCTAssert(resultantArray[7] == "Desolation")
-    XCTAssert(resultantArray[8] == "Desolation")
-    XCTAssert(resultantArray[9] == "Desolation")
-    
-    XCTAssertTrue(array.count == resultantArray.count)
+    do {
+      let desolationRow = String.init(data: try Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
+      let array = desolationRow.characters.split {$0 == " "}.map(String.init)
+      
+      let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
+      
+      // 10 verses in this song
+      XCTAssert(resultantArray[0] == "Desolation")
+      XCTAssert(resultantArray[1] == "Desolation")
+      XCTAssert(resultantArray[2] == "Desolation")
+      XCTAssert(resultantArray[3] == "Desolation")
+      XCTAssert(resultantArray[4] == "Desolation")
+      XCTAssert(resultantArray[5] == "Desolation")
+      XCTAssert(resultantArray[6] == "Desolation")
+      XCTAssert(resultantArray[7] == "Desolation")
+      XCTAssert(resultantArray[8] == "Desolation")
+      XCTAssert(resultantArray[9] == "Desolation")
+      
+      XCTAssertTrue(array.count == resultantArray.count)
+    } catch _ {
+      XCTAssertTrue(1 == 0)
+    }
   }
   
   func testPerformance() {
     measureMetrics(type(of: self).defaultPerformanceMetrics(), automaticallyStartMeasuring:true, for:{
       let _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
       self.stopMeasuring()
-    });
+    })
   }
 }
