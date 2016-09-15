@@ -59,7 +59,7 @@ public enum FuzzyMatchingOptionsDefaultValues : Double {
 /**
  Allows for fuzzy matching to happen on all String elements in an Array.
  */
-extension _ArrayType where Generator.Element == String {
+extension Sequence where Iterator.Element == String {
 
   /**
    Iterates over all elements in the array and executes a fuzzy match using the `pattern` parameter.
@@ -69,18 +69,18 @@ extension _ArrayType where Generator.Element == String {
    - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: An ordered set of Strings based on whichever element matches closest to the `pattern` parameter.
    */
-  public func sortedByFuzzyMatchPattern(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
+  public func sortedByFuzzyMatchPattern(_ pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> [String] {
     var indexesAdded = [Int]()
     var sortedArray = [String]()
-    for element in 1.stride(to: 10, by: 1) {
+    for element in stride(from: 1, to: 10, by: 1) {
       // stop if we've already found all there is to find
-      if sortedArray.count == count { break }
+      if sortedArray.count == underestimatedCount { break }
       // otherwise, proceed to the rest of the values
       var options = FuzzyMatchOptions.init(threshold:Double(Double(element) / Double(10)), distance:FuzzyMatchingOptionsDefaultValues.distance.rawValue)
       if let unwrappedDistance = distance {
         options.distance = unwrappedDistance
       }
-      for (index, value) in self.enumerate() {
+      for (index, value) in self.enumerated() {
         if !indexesAdded.contains(index) {
           if let _ = value.fuzzyMatchPattern(pattern, loc: loc, options: options) {
             sortedArray.append(value)
@@ -90,7 +90,7 @@ extension _ArrayType where Generator.Element == String {
       }
     }
     // make sure that the array we return to the user has ALL elements which is in the initial array
-    for (index, value) in self.enumerate() {
+    for (index, value) in self.enumerated() {
       if !indexesAdded.contains(index) {
         sortedArray.append(value)
       }
@@ -112,9 +112,9 @@ extension String {
    - parameter distance: Determines how close the match must be to the fuzzy location. See `loc` parameter.
    - returns: A Double which indicates how confident we are that the pattern can be found in the host string. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to be found
    */
-  public func confidenceScore(pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> Double? {
+  public func confidenceScore(_ pattern:String, loc:Int? = 0, distance:Double? = FuzzyMatchingOptionsDefaultValues.distance.rawValue) -> Double? {
     // start at a low threshold and work our way up
-    for index in 1.stride(to: 1000, by: 1) {
+    for index in stride(from: 1, to: 1000, by: 1) {
       let threshold:Double = Double(Double(index) / Double(1000))
       var d = FuzzyMatchingOptionsDefaultValues.distance.rawValue
       if let unwrappedDistance = distance {
@@ -136,21 +136,21 @@ extension String {
    - parameter options: Dictates how the search is executed. See `FuzzyMatchingOptionsParams` and `FuzzyMatchingOptionsDefaultValues` for details.
    - returns: An Int indicating where the fuzzy matched pattern can be found in the String.
    */
-  public func fuzzyMatchPattern(pattern:String, loc:Int? = 0, options:FuzzyMatchOptions? = nil) -> Int? {
+  public func fuzzyMatchPattern(_ pattern:String, loc:Int? = 0, options:FuzzyMatchOptions? = nil) -> Int? {
     guard characters.count > 0 else { return nil }
     let generatedOptions = generateOptions(options)
     let location = max(0, min(loc ?? 0, characters.count))
     let threshold = generatedOptions.threshold
     let distance = generatedOptions.distance
 
-    if caseInsensitiveCompare(pattern) == NSComparisonResult.OrderedSame {
+    if caseInsensitiveCompare(pattern) == ComparisonResult.orderedSame {
       return 0
     } else if pattern.isEmpty {
       return nil
     } else {
       if (location + pattern.characters.count) < characters.count {
-        let substring = self[self.startIndex.advancedBy(0)...self.startIndex.advancedBy(pattern.characters.count)]
-        if pattern.caseInsensitiveCompare(substring) == NSComparisonResult.OrderedSame {
+        let substring = self[self.characters.index(self.startIndex, offsetBy: 0)...self.characters.index(self.startIndex, offsetBy: pattern.characters.count)]
+        if pattern.caseInsensitiveCompare(substring) == ComparisonResult.orderedSame {
           return location
         } else {
           return matchBitapOfText(pattern, loc:location, threshold:threshold, distance:distance)
@@ -161,7 +161,7 @@ extension String {
     }
   }
   
-  func matchBitapOfText(pattern:String, loc:Int, threshold:Double, distance:Double) -> Int? {
+  func matchBitapOfText(_ pattern:String, loc:Int, threshold:Double, distance:Double) -> Int? {
     let alphabet = matchAlphabet(pattern)
     let bestGuessAtThresholdAndLocation = speedUpBySearchingForSubstring(pattern, loc:loc, threshold:threshold, distance:distance)
     var scoreThreshold = bestGuessAtThresholdAndLocation.threshold
@@ -174,7 +174,7 @@ extension String {
     var rd:[Int?] = [Int?]()
     var lastRd:[Int?] = [Int?]()
     bestLoc = NSNotFound
-    for (index, _) in pattern.characters.enumerate() {
+    for (index, _) in pattern.characters.enumerated() {
       binMin = 0
       binMid = binMax
       while binMin < binMid {
@@ -189,15 +189,15 @@ extension String {
       binMax = binMid
       var start = maxOfConstAndDiff(1, b:loc, c:binMid)
       let finish = min(loc + binMid, characters.count) + pattern.characters.count
-      rd = [Int?](count:finish + 2, repeatedValue:0)
+      rd = [Int?](repeating: 0, count: finish + 2)
       rd[finish + 1] = (1 << index) - 1
       var j = finish
-      for _ in j.stride(to: start - 1, by: -1) {
+      for _ in stride(from: j, to: start - 1, by: -1) {
         var charMatch:Int
         if characters.count <= j - 1 {
           charMatch = 0
         } else {
-          let character = String(self[startIndex.advancedBy(j - 1)])
+          let character = String(self[characters.index(startIndex, offsetBy: j - 1)])
           if characters.count <= j - 1 || alphabet[character] == nil {
             charMatch = 0
           } else {
@@ -231,12 +231,12 @@ extension String {
     return bestLoc != NSNotFound ? bestLoc : nil
   }
   
-  func matchAlphabet(pattern:String) -> [String: Int] {
+  func matchAlphabet(_ pattern:String) -> [String: Int] {
     var alphabet = [String: Int]()
     for char in pattern.characters {
       alphabet[String(char)] = 0
     }
-    for (i, char) in pattern.characters.enumerate() {
+    for (i, char) in pattern.characters.enumerated() {
       let stringRepresentationOfCharacter = String(char)
       let possibleEntry = alphabet[stringRepresentationOfCharacter]!
       let value = possibleEntry | (1 << (pattern.characters.count - i - 1))
@@ -245,7 +245,7 @@ extension String {
     return alphabet
   }
   
-  func bitapScoreForErrorCount(e:Int, x:Int, loc:Int, pattern:String, distance:Double) -> Double {
+  func bitapScoreForErrorCount(_ e:Int, x:Int, loc:Int, pattern:String, distance:Double) -> Double {
     let accuracy:Double = Double(e) / Double(pattern.characters.count)
     let proximity = abs(loc - x)
     if distance == 0 {
@@ -255,23 +255,23 @@ extension String {
     }
   }
   
-  func speedUpBySearchingForSubstring(pattern:String, loc:Int, threshold:Double, distance:Double) -> (bestLoc: Int, threshold: Double) {
+  func speedUpBySearchingForSubstring(_ pattern:String, loc:Int, threshold:Double, distance:Double) -> (bestLoc: Int, threshold: Double) {
     var scoreThreshold = threshold
     var bestLoc = NSNotFound
-    var range: Range<String.Index> = startIndex..<startIndex.advancedBy(characters.count)
-    if let possibleLiteralSearchRange = rangeOfString(pattern, options:NSStringCompareOptions.LiteralSearch, range:range, locale: NSLocale.currentLocale()) {
-      bestLoc = startIndex.distanceTo(possibleLiteralSearchRange.startIndex)
+    var range: Range<String.Index> = startIndex..<characters.index(startIndex, offsetBy: characters.count)
+    if let possibleLiteralSearchRange = self.range(of: pattern, options:NSString.CompareOptions.literal, range:range, locale: Locale.current) {
+      bestLoc = characters.distance(from: startIndex, to: possibleLiteralSearchRange.lowerBound)
       scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), threshold)
-      range = startIndex..<startIndex.advancedBy(min(loc + pattern.characters.count, characters.count))
-      if let possibleBackwardsSearchRange = rangeOfString(pattern, options:NSStringCompareOptions.BackwardsSearch, range:range, locale: NSLocale.currentLocale()) {
-        bestLoc = startIndex.distanceTo(possibleBackwardsSearchRange.startIndex)
+      range = startIndex..<characters.index(startIndex, offsetBy: min(loc + pattern.characters.count, characters.count))
+      if let possibleBackwardsSearchRange = self.range(of: pattern, options:NSString.CompareOptions.backwards, range:range, locale: Locale.current) {
+        bestLoc = characters.distance(from: startIndex, to: possibleBackwardsSearchRange.lowerBound)
         scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), scoreThreshold)
       }
     }
     return (bestLoc, threshold)
   }
 
-  func generateOptions(options:FuzzyMatchOptions?) -> FuzzyMatchOptions {
+  func generateOptions(_ options:FuzzyMatchOptions?) -> FuzzyMatchOptions {
     if let unwrappedOptions = options {
       return unwrappedOptions
     } else {
@@ -279,7 +279,7 @@ extension String {
     }
   }
 
-  func maxOfConstAndDiff(a:Int, b:Int, c:Int) -> Int {
+  func maxOfConstAndDiff(_ a:Int, b:Int, c:Int) -> Int {
     return b <= c ? a : b - c + a
   }
 }

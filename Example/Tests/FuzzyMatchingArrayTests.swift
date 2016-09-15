@@ -69,8 +69,8 @@ class FuzzyMatchingArrayTests: XCTestCase {
   }
   
   func testLongArray() {
-    let path = NSBundle(forClass: self.dynamicType).pathForResource("desolation_row", ofType: "txt")!
-    let desolationRow = String.init(data: NSData(contentsOfFile: path)!, encoding: NSUTF8StringEncoding)!
+    let path = Bundle(for: type(of: self)).path(forResource: "desolation_row", ofType: "txt")!
+    let desolationRow = String.init(data: try! Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
     let array = desolationRow.characters.split{$0 == " "}.map(String.init)
 
     let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
@@ -91,8 +91,8 @@ class FuzzyMatchingArrayTests: XCTestCase {
   }
   
   func testPerformance() {
-    measureMetrics(self.dynamicType.defaultPerformanceMetrics(), automaticallyStartMeasuring:true, forBlock:{
-      ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
+    measureMetrics(type(of: self).defaultPerformanceMetrics(), automaticallyStartMeasuring:true, for:{
+      let _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
       self.stopMeasuring()
     });
   }
