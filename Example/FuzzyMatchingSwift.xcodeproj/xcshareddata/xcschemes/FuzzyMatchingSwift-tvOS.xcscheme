@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
+               BlueprintIdentifier = "4157B5B31D88BAD800F75180"
                BuildableName = "FuzzyMatchingSwift.framework"
                BlueprintName = "FuzzyMatchingSwift-tvOS"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
+            BlueprintIdentifier = "4157B5B31D88BAD800F75180"
             BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-tvOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41F1928C1D7C7CCE008A01F8"
+            BlueprintIdentifier = "4157B5B31D88BAD800F75180"
             BuildableName = "FuzzyMatchingSwift.framework"
             BlueprintName = "FuzzyMatchingSwift-tvOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:FuzzyMatchingSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
