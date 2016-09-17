@@ -1,3 +1,10 @@
+# Version 0.5.0
+
+- Upgraded to Swift 3.0.
+- Added a simple iOS sample application.
+- Allowing for duplicates in `sortedByFuzzyMatchPattern`. Will always return an Array with the same size as the host Array.
+- More unit testing.
+
 # Version 0.4.0
 
 - Improved accuracy in fuzzy matching.
