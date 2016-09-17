@@ -9,7 +9,7 @@
 
 ## Acknowledgements
 
-The majority of the fuzzy matching logic included in this project is taken from Neil Fraser's [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
+The majority of the fuzzy matching logic included in this project is taken from [Neil Fraser's](https://neil.fraser.name/) [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
 
 ## Usage
 
@@ -92,9 +92,4 @@ FuzzyMatchingSwift is available under the Apache 2 license. See the LICENSE file
 
 ## Contributing
 
-Contributions to the development of the app are always welcome. Some guidelines:
-- If you **found a bug**, _and can provide steps to reliably reproduce it_, open an issue.
-- If you **have a feature request**, open an issue.
-- If you **want to contribute**, submit a pull request.
-
-There's a simple well-intentioned [Code of Conduct](http://contributor-covenant.org/version/1/2/0/code_of_conduct.txt) for any community that might spring up around the development of the library too.
+See the [Contributing Instructions](CONTRIBUTING.MD) for details.
