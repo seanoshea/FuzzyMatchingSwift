@@ -9,7 +9,7 @@
 
 ## Acknowledgements
 
-The majority of the fuzzy matching logic included in this project is taken from Neil Fraser's [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
+The majority of the fuzzy matching logic included in this project is taken from [Neil Fraser's](https://neil.fraser.name/) [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/)
 
 ## Usage
 
