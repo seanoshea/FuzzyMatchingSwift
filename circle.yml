@@ -3,7 +3,7 @@ machine:
     version: 8.0
 dependencies:
   pre:
-    # - brew install swiftlint
+    - brew install swiftlint
 test:
   override:
     - swiftlint lint --config .swiftlint.yml
