@@ -7,11 +7,11 @@ dependencies:
 test:
   override:
     # - swiftlint lint --config .swiftlint.yml
-    - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=10.0,name=iPhone 6s Plus" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
+    - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
     - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-iOS CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
     - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-macOS clean build | xcpretty -c
     - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-watchOS -destination "generic/platform=watchOS" CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
-    - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-tvOS -destination "platform=tvOS Simulator,name=Apple TV 1080p" clean build | xcpretty -c
+    - set -o pipefail && xcodebuild -workspace Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-tvOS clean build | xcpretty -c
     - bundle exec pod lib lint --quick --allow-warnings
   post:
     - bash <(curl -s https://codecov.io/bash)
