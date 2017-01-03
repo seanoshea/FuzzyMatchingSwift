@@ -15,7 +15,6 @@
 		417928801D7325510064BF50 /* FuzzyMatchingArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4179287F1D7325510064BF50 /* FuzzyMatchingArrayTests.swift */; };
 		418322D41D86124C00A6EFAC /* desolation_row.txt in Resources */ = {isa = PBXBuildFile; fileRef = 418322D31D86124C00A6EFAC /* desolation_row.txt */; };
 		41F7FDC11D720ED200BF069A /* FuzzyMatchingStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7FDC01D720ED200BF069A /* FuzzyMatchingStringTests.swift */; };
-		41F981B81D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4127E4031D87A77400901530 /* Info.plist */; };
 		41F981B91D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5E91D88BDED00F75180 /* Info.plist */; };
 		41F981BA1D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EC1D88BDF600F75180 /* Info.plist */; };
 		41F981BB1D88DA4B00187CE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4157B5EF1D88BDFF00F75180 /* Info.plist */; };
@@ -407,7 +406,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					4127E3F41D87A77400901530 = {
@@ -466,7 +465,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F981B81D88DA4B00187CE0 /* Info.plist in Resources */,
 				41F981B91D88DA4B00187CE0 /* Info.plist in Resources */,
 				41F981BA1D88DA4B00187CE0 /* Info.plist in Resources */,
 				41F981BB1D88DA4B00187CE0 /* Info.plist in Resources */,
