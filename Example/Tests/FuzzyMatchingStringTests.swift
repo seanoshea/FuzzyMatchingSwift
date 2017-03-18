@@ -119,8 +119,7 @@ class FuzzyMatchingStringTests: XCTestCase {
       XCTAssertTrue(secondWord == 8)
       XCTAssertTrue(secondLine == 79)
       XCTAssertTrue(eliot == 3061)
-    }
-    catch _ {
+    } catch _ {
       XCTAssertTrue(1 == 0)
     }
   }
