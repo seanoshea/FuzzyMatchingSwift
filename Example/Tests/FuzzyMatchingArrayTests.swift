@@ -23,7 +23,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
     let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
     let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on")
     let third = ["one"].sortedByFuzzyMatchPattern("on")
-    let fourth = ["one", "one", "two"]
+    let fourth = ["one", "one", "two"].sortedByFuzzyMatchPattern("on")
       
     XCTAssert(first[0] == "one")
     XCTAssert(first[1] == "two")
