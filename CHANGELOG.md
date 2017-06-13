@@ -1,3 +1,7 @@
+# Version 0.5.1
+
+- Minor unit test change.
+
 # Version 0.5.0
 
 - Upgraded to Swift 3.0.
