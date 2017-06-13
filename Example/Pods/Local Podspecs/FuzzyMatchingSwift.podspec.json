@@ -1,6 +1,6 @@
 {
   "name": "FuzzyMatchingSwift",
-  "version": "0.4.0",
+  "version": "0.5.1",
   "summary": "Fuzzy matching String extensions.",
   "description": "FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings and Arrays of Strings.",
   "homepage": "https://github.com/seanoshea/FuzzyMatchingSwift",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/seanoshea/FuzzyMatchingSwift.git",
-    "tag": "0.4.0"
+    "tag": "0.5.1"
   },
   "social_media_url": "https://twitter.com/seanoshea",
   "requires_arc": true,
