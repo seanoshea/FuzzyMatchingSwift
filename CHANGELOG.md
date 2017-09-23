@@ -1,3 +1,10 @@
+# Version 0.6.0
+
+- Swift 4 upgrade.
+- Bumping minimum iOS version to 10.x
+- Bumping minimum watchOS version to 4.x
+- Bumping minimum tvOS version to 10.x
+
 # Version 0.5.1
 
 - Minor unit test change.

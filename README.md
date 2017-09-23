@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Platform](https://img.shields.io/cocoapods/p/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg)
+![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg)
 [![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Acknowledgements
@@ -51,10 +51,10 @@ All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/Fuzz
 
 ## Requirements
 
-* iOS >= 9.0
+* iOS >= 10.0
 * MacOS >= 10.10
-* watchOS >= 2.0
-* tvOS >= 9.0
+* watchOS >= 4.0
+* tvOS >= 10.0
 
 ## Installation
 
