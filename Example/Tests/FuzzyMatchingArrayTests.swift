@@ -72,7 +72,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
     let path = Bundle(for: type(of: self)).path(forResource: "desolation_row", ofType: "txt")!
     do {
       let desolationRow = String.init(data: try Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
-      let array = desolationRow.characters.split {$0 == " "}.map(String.init)
+      let array = desolationRow.split {$0 == " "}.map(String.init)
       
       let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
       
