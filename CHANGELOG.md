@@ -1,3 +1,11 @@
+# Version 0.7.0
+
+- Upgrade to Xcode 9.1
+- Bumping minimum iOS version to 11.1
+- Bumping minimum tvOS version to 11.1
+- Bumping minimum OSX version to 10.13
+- Bumping minimum watchOS version to 4.1
+
 # Version 0.6.0
 
 - Swift 4 upgrade.
