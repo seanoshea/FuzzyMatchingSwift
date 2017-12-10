@@ -137,9 +137,9 @@ extension String {
    - returns: An Int indicating where the fuzzy matched pattern can be found in the String.
    */
   public func fuzzyMatchPattern(_ pattern:String, loc:Int? = 0, options:FuzzyMatchOptions? = nil) -> Int? {
-    guard characters.count > 0 else { return nil }
+    guard count > 0 else { return nil }
     let generatedOptions = generateOptions(options)
-    let location = max(0, min(loc ?? 0, characters.count))
+    let location = max(0, min(loc ?? 0, count))
     let threshold = generatedOptions.threshold
     let distance = generatedOptions.distance
 
@@ -148,8 +148,8 @@ extension String {
     } else if pattern.isEmpty {
       return nil
     } else {
-      if (location + pattern.characters.count) < characters.count {
-        let substring = self[self.characters.index(self.startIndex, offsetBy: 0)...self.characters.index(self.startIndex, offsetBy: pattern.characters.count)]
+      if (location + pattern.count) < count {
+        let substring = self[self.index(self.startIndex, offsetBy: 0)...self.index(self.startIndex, offsetBy: pattern.count)]
         if pattern.caseInsensitiveCompare(substring) == ComparisonResult.orderedSame {
           return location
         } else {
@@ -167,14 +167,14 @@ extension String {
     var scoreThreshold = bestGuessAtThresholdAndLocation.threshold
     var bestLoc = bestGuessAtThresholdAndLocation.bestLoc
     
-    let matchMask = 1 << (pattern.characters.count - 1)
+    let matchMask = 1 << (pattern.count - 1)
     var binMin:Int
     var binMid:Int
-    var binMax = pattern.characters.count + characters.count
+    var binMax = pattern.count + count
     var rd:[Int?] = [Int?]()
     var lastRd:[Int?] = [Int?]()
     bestLoc = NSNotFound
-    for (index, _) in pattern.characters.enumerated() {
+    for (index, _) in pattern.enumerated() {
       binMin = 0
       binMid = binMax
       while binMin < binMid {
@@ -188,17 +188,17 @@ extension String {
       }
       binMax = binMid
       var start = maxOfConstAndDiff(1, b:loc, c:binMid)
-      let finish = min(loc + binMid, characters.count) + pattern.characters.count
+      let finish = min(loc + binMid, count) + pattern.count
       rd = [Int?](repeating: 0, count: finish + 2)
       rd[finish + 1] = (1 << index) - 1
       var j = finish
       for _ in stride(from: j, to: start - 1, by: -1) {
         var charMatch:Int
-        if characters.count <= j - 1 {
+        if count <= j - 1 {
           charMatch = 0
         } else {
-          let character = String(self[characters.index(startIndex, offsetBy: j - 1)])
-          if characters.count <= j - 1 || alphabet[character] == nil {
+          let character = String(self[self.index(startIndex, offsetBy: j - 1)])
+          if count <= j - 1 || alphabet[character] == nil {
             charMatch = 0
           } else {
             charMatch = alphabet[character]!
@@ -233,20 +233,20 @@ extension String {
   
   func matchAlphabet(_ pattern:String) -> [String: Int] {
     var alphabet = [String: Int]()
-    for char in pattern.characters {
+    for char in pattern {
       alphabet[String(char)] = 0
     }
-    for (i, char) in pattern.characters.enumerated() {
+    for (i, char) in pattern.enumerated() {
       let stringRepresentationOfCharacter = String(char)
       let possibleEntry = alphabet[stringRepresentationOfCharacter]!
-      let value = possibleEntry | (1 << (pattern.characters.count - i - 1))
+      let value = possibleEntry | (1 << (pattern.count - i - 1))
       alphabet[stringRepresentationOfCharacter] = value
     }
     return alphabet
   }
   
   func bitapScoreForErrorCount(_ e:Int, x:Int, loc:Int, pattern:String, distance:Double) -> Double {
-    let accuracy:Double = Double(e) / Double(pattern.characters.count)
+    let accuracy:Double = Double(e) / Double(pattern.count)
     let proximity = abs(loc - x)
     if distance == 0 {
       return Double(proximity == 0 ? accuracy : 1)
@@ -258,13 +258,13 @@ extension String {
   func speedUpBySearchingForSubstring(_ pattern:String, loc:Int, threshold:Double, distance:Double) -> (bestLoc: Int, threshold: Double) {
     var scoreThreshold = threshold
     var bestLoc = NSNotFound
-    var range: Range<String.Index> = startIndex..<characters.index(startIndex, offsetBy: characters.count)
+    var range: Range<String.Index> = startIndex..<index(startIndex, offsetBy: count)
     if let possibleLiteralSearchRange = self.range(of: pattern, options:NSString.CompareOptions.literal, range:range, locale: Locale.current) {
-      bestLoc = characters.distance(from: startIndex, to: possibleLiteralSearchRange.lowerBound)
+      bestLoc = self.distance(from: startIndex, to: possibleLiteralSearchRange.lowerBound)
       scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), threshold)
-      range = startIndex..<characters.index(startIndex, offsetBy: min(loc + pattern.characters.count, characters.count))
+      range = startIndex..<index(startIndex, offsetBy: min(loc + pattern.count, count))
       if let possibleBackwardsSearchRange = self.range(of: pattern, options:NSString.CompareOptions.backwards, range:range, locale: Locale.current) {
-        bestLoc = characters.distance(from: startIndex, to: possibleBackwardsSearchRange.lowerBound)
+        bestLoc = self.distance(from: startIndex, to: possibleBackwardsSearchRange.lowerBound)
         scoreThreshold = min(bitapScoreForErrorCount(0, x:bestLoc, loc:loc, pattern:pattern, distance:distance), scoreThreshold)
       }
     }
