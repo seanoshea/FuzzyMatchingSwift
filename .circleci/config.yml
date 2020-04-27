@@ -15,3 +15,4 @@ test:
     - bundle exec pod lib lint --quick --allow-warnings
   post:
     - bash <(curl -s https://codecov.io/bash)
+
