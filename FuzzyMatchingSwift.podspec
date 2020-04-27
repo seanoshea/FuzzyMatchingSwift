@@ -12,9 +12,9 @@ FuzzyMatchingSwift provides String extensions which allow developers to find sim
   s.social_media_url          = 'https://twitter.com/seanoshea'
   s.requires_arc              = true
   s.compiler_flags            = '-whole-module-optimization'
-  s.ios.deployment_target     = '11.1'
-  s.osx.deployment_target     = '10.13'
-  s.watchos.deployment_target = '4.1'
-  s.tvos.deployment_target    = '11.1'
+  s.ios.deployment_target     = '13.2'
+  s.osx.deployment_target     = '10.15'
+  s.watchos.deployment_target = '6.1'
+  s.tvos.deployment_target    = '13.2'
   s.source_files              = 'FuzzyMatchingSwift/Classes/**/*'
 end
