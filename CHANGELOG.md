@@ -1,3 +1,11 @@
+# Version 0.8.0
+
+- Upgrade to Xcode 11.3.1
+- Bumping minimum iOS version to 13.2
+- Bumping minimum tvOS version to 13.2
+- Bumping minimum OSX version to 10.15
+- Bumping minimum watchOS version to 6.2
+
 # Version 0.7.0
 
 - Upgrade to Xcode 9.1
