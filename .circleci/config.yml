@@ -8,6 +8,7 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
+      - run: bundle install
       - run: cd Example && bundle exec pod install
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=13.2,name=iPhone 11" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-iOS CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
