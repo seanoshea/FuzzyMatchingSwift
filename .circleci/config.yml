@@ -7,9 +7,7 @@ jobs:
       xcode: 11.3.1
     shell: /bin/bash --login -o pipefail
     steps:
-      - run:
-          name: WTF
-          command: ls -ltr
+      - checkout
       - run:
           name: Install CocoaPods
           command: cd Example && bundle exec pod install
