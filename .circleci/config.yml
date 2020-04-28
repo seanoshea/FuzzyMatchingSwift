@@ -7,7 +7,6 @@ jobs:
       xcode: 11.3.1
     shell: /bin/bash --login -o pipefail
     steps:
-      - checkout
       - run:
           name: Run Switflint
           command: swiftlint lint --config .swiftlint.yml
