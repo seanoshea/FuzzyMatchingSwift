@@ -19,10 +19,10 @@
   "requires_arc": true,
   "compiler_flags": "-whole-module-optimization",
   "platforms": {
-    "ios": "11.1",
+    "ios": "13.2",
     "osx": "10.13",
     "watchos": "4.1",
-    "tvos": "11.1"
+    "tvos": "13.2"
   },
   "source_files": "FuzzyMatchingSwift/Classes/**/*"
 }

@@ -82,7 +82,7 @@ extension Sequence where Iterator.Element == String {
       }
       for (index, value) in self.enumerated() {
         if !indexesAdded.contains(index) {
-          if let _ = value.fuzzyMatchPattern(pattern, loc: loc, options: options) {
+          if value.fuzzyMatchPattern(pattern, loc: loc, options: options) != nil {
             sortedArray.append(value)
             indexesAdded.append(index)
           }
