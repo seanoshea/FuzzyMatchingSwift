@@ -96,7 +96,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
   
   func testPerformance() {
     measureMetrics(type(of: self).defaultPerformanceMetrics, automaticallyStartMeasuring:true, for: {
-      let _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
+      _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
       self.stopMeasuring()
     })
   }
