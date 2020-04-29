@@ -16,8 +16,7 @@ jobs:
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-watchOS -destination "generic/platform=watchOS" CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-tvOS -destination "platform=tvOS Simulator,name=Apple TV 4K (at 1080p)" clean build | xcpretty -c
       - run: bundle exec pod lib lint --quick --allow-warnings
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
+      - codecov/upload
   swiftlint:
     docker:
       - image: dantoml/swiftlint:latest
