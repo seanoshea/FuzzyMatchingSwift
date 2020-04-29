@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.2
 jobs:
@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: bundle install
       - run: cd Example && bundle exec pod install
-      - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=13.3,name=iPhone 11" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
+      - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=13.3,name=iPhone 11" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output junit.xml
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-iOS CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-macOS clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-watchOS -destination "generic/platform=watchOS" CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
