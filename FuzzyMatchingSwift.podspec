@@ -17,4 +17,5 @@ FuzzyMatchingSwift provides String extensions which allow developers to find sim
   s.watchos.deployment_target = '6.1'
   s.tvos.deployment_target    = '13.2'
   s.source_files              = 'FuzzyMatchingSwift/Classes/**/*'
+  s.swift_version             = '5.0'
 end

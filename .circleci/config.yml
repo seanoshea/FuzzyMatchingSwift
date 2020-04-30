@@ -11,11 +11,15 @@ jobs:
       - run: bundle install
       - run: cd Example && bundle exec pod install
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=13.3,name=iPhone 11" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output junit.xml
+      - store_artifacts:
+          path: junit.xml
+      - store_test_results:
+          path: junit.xml
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-iOS CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-macOS clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-watchOS -destination "generic/platform=watchOS" CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-tvOS -destination "platform=tvOS Simulator,name=Apple TV 4K (at 1080p)" clean build | xcpretty -c
-      - run: bundle exec pod lib lint --quick --allow-warnings
+      - run: bundle exec pod lib lint --quick
       - run: curl -s https://codecov.io/bash
   swiftlint:
     docker:
