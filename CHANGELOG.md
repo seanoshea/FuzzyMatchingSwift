@@ -1,3 +1,7 @@
+# Version 0.8.1
+
+- Minor version incompatability issues.
+
 # Version 0.8.0
 
 - Upgrade to Xcode 11.3.1
