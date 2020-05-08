@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift 5.2.x](https://img.shields.io/badge/Swift-5.2.x-orange.svg)
-[![Languages](https://img.shields.io/github/languages/count/seanoshea/BostonFreedomTrail)](https://img.shields.io/github/languages/count/seanoshea/FuzzyMatchingSwift)
+[![Languages](https://img.shields.io/github/languages/count/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/languages/count/seanoshea/FuzzyMatchingSwift)
 [![Top Language](https://img.shields.io/github/languages/top/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/languages/top/seanoshea/FuzzyMatchingSwift)
 [![Open Issues](https://img.shields.io/github/issues/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/issues/seanoshea/FuzzyMatchingSwift)
 [![Closed Issues](https://img.shields.io/github/issues-closed/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/issues-closed/seanoshea/FuzzyMatchingSwift)
