@@ -1,12 +1,15 @@
 version: 2.1
 orbs:
   codecov: codecov/codecov@1.0.2
+  macos: circleci/macos@2
 jobs:
   build-and-test:
     macos:
       xcode: 16.0
     shell: /bin/bash --login -o pipefail
     steps:
+      - macos/switch-ruby:
+        version: "3.3"
       - checkout
       - run: bundle install
       - run: cd Example && bundle exec pod install
