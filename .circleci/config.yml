@@ -3,8 +3,8 @@ orbs:
   codecov: codecov/codecov@1.0.2
 jobs:
   build-and-test:
-    docker:
-      - image: circleci/ruby:3.3.5
+    name: Set Ruby Version
+      command: rbenv global 3.3.5 && rbenv rehash
     macos:
       xcode: 16.0
     shell: /bin/bash --login -o pipefail
