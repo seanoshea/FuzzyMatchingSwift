@@ -21,9 +21,12 @@ The majority of the fuzzy matching logic included in this project is taken from 
 ## Usage
 
 ### Matching on Strings
+
 `FuzzyMatchOptions` can be passed to any of these methods to alter how the strict or loose the fuzzy matching algorithm operates.
+
 - `threshold` in `FuzzyMatchOptions` defines how strict you want to be when fuzzy matching. A value of 0.0 is equivalent to an exact match. A value of 1.0 indicates a very loose understanding of whether a match has been found.
 - `distance` in `FuzzyMatchOptions` defines where in the host String to look for the pattern.
+
 ```swift
 "abcdef".fuzzyMatchPattern("ab") // returns 0
 "abcdef".fuzzyMatchPattern("z") // returns nil
@@ -31,7 +34,9 @@ The majority of the fuzzy matching logic included in this project is taken from 
 ```
 
 ### Matching on Arrays of Strings
+
 Returns a new instance of an Array which is sorted by the closest fuzzy match. Does not sort the host Array in place. Will always return the same number of elements that are found in the host Array.
+
 ```swift
 ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
 // returns ["one", "two", "three"]
@@ -42,7 +47,9 @@ Returns a new instance of an Array which is sorted by the closest fuzzy match. D
 ```
 
 ### Providing a confidence level
+
 A confidence level allows client code to understand how likely the fuzzy searching algorithm is to find a pattern within a host String. `confidenceScore` returns a Double which indicates how confident we are that the pattern can be found in the host String. A low value (0.001) indicates that the pattern is likely to be found. A high value (0.999) indicates that the pattern is not likely to be found.
+
 ```swift
 "Stacee Lima".confidenceScore("SL") // returns 0.5
 "abcdef".confidenceScore("g") // returns nil
@@ -56,10 +63,10 @@ All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/Fuzz
 
 ## Requirements
 
-* iOS >= 13.2
-* MacOS >= 10.15
-* watchOS >= 6.2
-* tvOS >= 13.2
+- iOS >= 18.0
+- MacOS >= 15.0
+- watchOS >= 11.0
+- tvOS >= 8.0
 
 ## Installation
 
