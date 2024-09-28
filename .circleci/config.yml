@@ -4,7 +4,7 @@ orbs:
 jobs:
   build-and-test:
     macos:
-      xcode: 11.3.1
+      xcode: 16.0
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
