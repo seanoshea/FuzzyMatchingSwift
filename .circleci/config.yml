@@ -6,7 +6,6 @@ jobs:
   build-and-test:
     macos:
       xcode: 16.0
-    shell: /bin/bash --login -o pipefail
     steps:
       - macos/switch-ruby:
         version: "3.3"
