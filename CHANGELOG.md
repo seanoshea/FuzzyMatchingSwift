@@ -1,3 +1,8 @@
+# Version 0.9.0
+
+- Upgrading Swift and iOS/MacOS/watchOS and tvOS versions.
+- Upgrading Ruby & CircleCI for the development & CI environments.
+
 # Version 0.8.1
 
 - Minor version incompatability issues.
