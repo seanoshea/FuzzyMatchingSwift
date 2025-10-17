@@ -7,6 +7,8 @@
   - watchOS 11.2
   - tvOS 18.2
 - Updated Xcode to 16.2 in CI environment
+- Migrated from CircleCI to GitHub Actions
+- Updated Ruby requirement to 3.4.7
 
 # Version 0.9.0
 

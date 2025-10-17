@@ -1,6 +1,6 @@
 # FuzzyMatchingSwift
 
-[![CI Status](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop.svg?style=svg)](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop)
+[![CI Status](https://github.com/seanoshea/FuzzyMatchingSwift/actions/workflows/ci.yml/badge.svg)](https://github.com/seanoshea/FuzzyMatchingSwift/actions/workflows/ci.yml)
 [![Code Coverage](http://codecov.io/github/seanoshea/FuzzyMatchingSwift/coverage.svg?branch=develop)](http://codecov.io/github/seanoshea/FuzzyMatchingSwift?branch=develop)
 [![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/cocoapods/l/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
