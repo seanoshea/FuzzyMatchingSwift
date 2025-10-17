@@ -168,7 +168,7 @@ extension String {
     var rd:[Int?] = [Int?]()
     var lastRd:[Int?] = [Int?]()
     bestLoc = NSNotFound
-    for index in pattern.indices {
+    for (index, _) in pattern.enumerated() {
       binMin = 0
       binMid = binMax
       while binMin < binMid {
