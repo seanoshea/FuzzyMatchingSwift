@@ -22,20 +22,19 @@ jobs:
   build-and-test:
     name: Build and Test
     runs-on: macos-15
-    strategy:
-      matrix:
-        destination:
-          - platform=iOS Simulator,OS=18.2,name=iPhone 16 Pro Max
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
+      - name: Show available Xcode versions
+        run: ls /Applications/ | grep Xcode
 
       - name: Show Xcode version
         run: xcodebuild -version
+
+      - name: List available simulators
+        run: xcrun simctl list devices available
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -43,17 +42,18 @@ jobs:
           ruby-version: '3.4.7'
           bundler-cache: true
 
-      - name: Install CocoaPods dependencies
+      - name: Install dependencies
         run: |
+          gem install xcpretty
           cd Example
           bundle exec pod install
 
       - name: Run tests
         run: |
-          xcodebuild \
+          set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
             -scheme FuzzyMatchingSwift-Example \
-            -destination "${{ matrix.destination }}" \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
             ONLY_ACTIVE_ARCH=YES \
             GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
             GCC_GENERATE_TEST_COVERAGE_FILES=YES \
@@ -89,23 +89,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4.7'
           bundler-cache: true
 
-      - name: Install CocoaPods dependencies
+      - name: Install dependencies
         run: |
+          gem install xcpretty
           cd Example
           bundle exec pod install
 
       - name: Build ${{ matrix.scheme }}
         run: |
-          xcodebuild \
+          set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
             -scheme ${{ matrix.scheme }} \
             -destination "${{ matrix.destination }}" \
@@ -120,9 +118,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
