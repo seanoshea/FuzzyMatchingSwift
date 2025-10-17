@@ -27,6 +27,20 @@
 			remoteGlobalIDString = 4127E3F41D87A77400901530;
 			remoteInfo = FuzzyMatchingSwift_Example;
 		};
+		PODS_FMS_EXAMPLE_PROXY /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PODS_PROJECT_REF /* Pods.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D78E88F7DB454D1950E97FD8D03CEEFD;
+			remoteInfo = FuzzyMatchingSwift;
+		};
+		PODS_FMS_TESTS_PROXY /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = PODS_PROJECT_REF /* Pods.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D78E88F7DB454D1950E97FD8D03CEEFD;
+			remoteInfo = FuzzyMatchingSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +77,7 @@
 		9E61241DCC9F8465E048758E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B55C5AA77549D0F519FA9CAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BD37D97AF17DAC3E3DB8AF62 /* Pods_FuzzyMatchingSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMatchingSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		PODS_PROJECT_REF /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

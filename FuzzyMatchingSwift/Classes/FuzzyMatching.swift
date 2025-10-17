@@ -80,20 +80,14 @@ extension Sequence where Iterator.Element == String {
       if let unwrappedDistance = distance {
         options.distance = unwrappedDistance
       }
-      for (index, value) in self.enumerated() {
-        if !indexesAdded.contains(index) {
-          if value.fuzzyMatchPattern(pattern, loc: loc, options: options) != nil {
-            sortedArray.append(value)
-            indexesAdded.append(index)
-          }
-        }
+      for (index, value) in self.enumerated() where !indexesAdded.contains(index) && value.fuzzyMatchPattern(pattern, loc: loc, options: options) != nil {
+        sortedArray.append(value)
+        indexesAdded.append(index)
       }
     }
     // make sure that the array we return to the user has ALL elements which is in the initial array
-    for (index, value) in self.enumerated() {
-      if !indexesAdded.contains(index) {
-        sortedArray.append(value)
-      }
+    for (index, value) in self.enumerated() where !indexesAdded.contains(index) {
+      sortedArray.append(value)
     }
     return sortedArray
   }
@@ -174,7 +168,7 @@ extension String {
     var rd:[Int?] = [Int?]()
     var lastRd:[Int?] = [Int?]()
     bestLoc = NSNotFound
-    for (index, _) in pattern.enumerated() {
+    for index in pattern.indices {
       binMin = 0
       binMid = binMax
       while binMin < binMid {
