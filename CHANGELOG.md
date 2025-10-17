@@ -8,6 +8,7 @@
   - tvOS 18.2
 - Updated Xcode to 16.2 in CI environment
 - Migrated from CircleCI to GitHub Actions
+- Fixed tvOS build destination in GitHub Actions workflow
 - Updated Ruby requirement to 3.4.7
 
 # Version 0.9.0
