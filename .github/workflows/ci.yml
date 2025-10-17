@@ -83,7 +83,7 @@ jobs:
           - scheme: FuzzyMatchingSwift-watchOS
             destination: generic/platform=watchOS
           - scheme: FuzzyMatchingSwift-tvOS
-            destination: platform=tvOS Simulator,name=Apple TV
+            destination: generic/platform=tvOS
 
     steps:
       - name: Checkout
