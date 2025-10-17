@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CF9D599A8CB6C25FA28C758C9E808E7 /* FuzzyMatchingSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F98D4186F083EC64BE794297C7021032 /* FuzzyMatchingSwift-dummy.m */; };
-		1E75368E6F3B3CF78F2B69520996B477 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		201C39CED9A3C986DA7F30DBEB7A8473 /* Pods-FuzzyMatchingSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC77AA04DC34656C6ADBE742F4416E62 /* Pods-FuzzyMatchingSwift_Tests-dummy.m */; };
-		2813E213F5F26726E443347CAC2D406D /* Pods-FuzzyMatchingSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86495F06948832671199FB612BB1F18A /* Pods-FuzzyMatchingSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C894FB204A7DB00B729E9565DF9A6BC /* FuzzyMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D947C348AC5BAA50319BD28AEBF69E /* FuzzyMatching.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
-		5BE4E4CCF34C057084CFEC42769ED364 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8208B0E0A95B247A3C8EE2963DA4B01C /* Pods-FuzzyMatchingSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 175EB6B4224A32498BA0ACEF5ED9D588 /* Pods-FuzzyMatchingSwift_Example-dummy.m */; };
-		9AE3C2174672425179C720E84E4D90DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		B628C3B5FFF68D024A762394FB654CBA /* Pods-FuzzyMatchingSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0909FEAD5F27056809B16D36DD187A8 /* Pods-FuzzyMatchingSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE3F0D7E738F57511578B26F81B00A18 /* FuzzyMatchingSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA3EAA8B2D07DF54242A7EA03588C15 /* FuzzyMatchingSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A9C405D7CCB50985896267BEC4447EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		50271EC9123C220756BF5D767A67317B /* Pods-FuzzyMatchingSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86495F06948832671199FB612BB1F18A /* Pods-FuzzyMatchingSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		679AB3CFF0EC7C27EDAB1A21D72520E2 /* FuzzyMatchingSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA3EAA8B2D07DF54242A7EA03588C15 /* FuzzyMatchingSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68593A61F39F3E53EBAD10268318511D /* FuzzyMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D947C348AC5BAA50319BD28AEBF69E /* FuzzyMatching.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
+		69A0E55A877B4F867D29FBC2E10A20F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		77D973AAC6F8605FE2F9997B7C941B0C /* Pods-FuzzyMatchingSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC77AA04DC34656C6ADBE742F4416E62 /* Pods-FuzzyMatchingSwift_Tests-dummy.m */; };
+		8AB42F61D9D480871EAE309BBE4C5504 /* FuzzyMatchingSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F98D4186F083EC64BE794297C7021032 /* FuzzyMatchingSwift-dummy.m */; };
+		8F40A1748BAE949FBEE60DCFDBEA5EB8 /* Pods-FuzzyMatchingSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 175EB6B4224A32498BA0ACEF5ED9D588 /* Pods-FuzzyMatchingSwift_Example-dummy.m */; };
+		CC0E80C9E272DC7A78DF84B1B95BF25B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		E1F9F927BC233C5B584667F6E0148EBB /* Pods-FuzzyMatchingSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0909FEAD5F27056809B16D36DD187A8 /* Pods-FuzzyMatchingSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		11639617078CB5AFE4E8BB117D2A97D1 /* PBXContainerItemProxy */ = {
+		5922A92DDB9803C65D9C07EF0DB7A681 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AE249A27D3C99143957DDAB1CAF42C16;
 			remoteInfo = "Pods-FuzzyMatchingSwift_Example";
 		};
-		FFD857F838CA190A9101BB4EB8B7DE5F /* PBXContainerItemProxy */ = {
+		795A92DD9EA151B6610AAC779CED38DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -45,11 +45,11 @@
 		175A05169017118CF55AD33D9CCF39BB /* FuzzyMatchingSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FuzzyMatchingSwift.release.xcconfig; sourceTree = "<group>"; };
 		175EB6B4224A32498BA0ACEF5ED9D588 /* Pods-FuzzyMatchingSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FuzzyMatchingSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		2E92DF1EDDD39C20404AC3D99426DC36 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		45E54A5D100A54281D832830CA1F7A30 /* Pods-FuzzyMatchingSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FuzzyMatchingSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4FA3EAA8B2D07DF54242A7EA03588C15 /* FuzzyMatchingSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FuzzyMatchingSwift-umbrella.h"; sourceTree = "<group>"; };
 		5B246FF544F1E5DBD917082CAEAB59E4 /* FuzzyMatchingSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FuzzyMatchingSwift; path = FuzzyMatchingSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA73748688F0963425AECAEDF424FAF /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMatchingSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75229DC493D65D632E714AE85B6EEF5E /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMatchingSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		86495F06948832671199FB612BB1F18A /* Pods-FuzzyMatchingSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FuzzyMatchingSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		90D947C348AC5BAA50319BD28AEBF69E /* FuzzyMatching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FuzzyMatching.swift; path = FuzzyMatchingSwift/Classes/FuzzyMatching.swift; sourceTree = "<group>"; };
@@ -73,27 +73,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		502EC28738B14891D988144EA51DAE00 /* Frameworks */ = {
+		24C8CA3DC357D2172F077DE74580A8F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E75368E6F3B3CF78F2B69520996B477 /* Foundation.framework in Frameworks */,
+				4A9C405D7CCB50985896267BEC4447EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C616E4E301AF56DCBDBC003668569DD /* Frameworks */ = {
+		6558F0793F54E711AE67EDF6D1F9913C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE3C2174672425179C720E84E4D90DC /* Foundation.framework in Frameworks */,
+				69A0E55A877B4F867D29FBC2E10A20F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95900BEA5F910BCAED4B806DDA10634F /* Frameworks */ = {
+		F2A676E81CDA732FCB5CC8D188BCE019 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE4E4CCF34C057084CFEC42769ED364 /* Foundation.framework in Frameworks */,
+				CC0E80C9E272DC7A78DF84B1B95BF25B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,14 +115,6 @@
 			);
 			name = "Pods-FuzzyMatchingSwift_Example";
 			path = "Target Support Files/Pods-FuzzyMatchingSwift_Example";
-			sourceTree = "<group>";
-		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		61A498C16C6D3A7F30DB0EE513B067A1 /* Targets Support Files */ = {
@@ -182,7 +174,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +199,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		F2A9EC550D9E84B683500F0AAAD2004D /* Pods-FuzzyMatchingSwift_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,27 +226,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		214EF9143E7D417A51B7158661C99A53 /* Headers */ = {
+		04849233845E31BE52F19D2F64562957 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2813E213F5F26726E443347CAC2D406D /* Pods-FuzzyMatchingSwift_Example-umbrella.h in Headers */,
+				E1F9F927BC233C5B584667F6E0148EBB /* Pods-FuzzyMatchingSwift_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BAE6EA60A4C9BF74624B542191B6BCE /* Headers */ = {
+		3D23A0B81540D3AB62AAA1978CF964CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3F0D7E738F57511578B26F81B00A18 /* FuzzyMatchingSwift-umbrella.h in Headers */,
+				50271EC9123C220756BF5D767A67317B /* Pods-FuzzyMatchingSwift_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4B631A01D034C63101B602072942B24 /* Headers */ = {
+		F9C13DB5A69A56F0B885E6B5A8CF24C7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B628C3B5FFF68D024A762394FB654CBA /* Pods-FuzzyMatchingSwift_Tests-umbrella.h in Headers */,
+				679AB3CFF0EC7C27EDAB1A21D72520E2 /* FuzzyMatchingSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,17 +255,17 @@
 /* Begin PBXNativeTarget section */
 		AE249A27D3C99143957DDAB1CAF42C16 /* Pods-FuzzyMatchingSwift_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C31ED0E2FE0B7719D59E3314F96B7677 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Example" */;
+			buildConfigurationList = 7338772186F5516805E228966B504BE5 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Example" */;
 			buildPhases = (
-				214EF9143E7D417A51B7158661C99A53 /* Headers */,
-				25C666FBF11F5B8861993A13F8CE0B03 /* Sources */,
-				7C616E4E301AF56DCBDBC003668569DD /* Frameworks */,
-				8FCD13B0703C1F38370293768FD4DAC3 /* Resources */,
+				3D23A0B81540D3AB62AAA1978CF964CD /* Headers */,
+				7E1BFA1150CF9A6167D1B2969413AABB /* Sources */,
+				24C8CA3DC357D2172F077DE74580A8F3 /* Frameworks */,
+				FBA3A1CAF63EEF304A1F45CB43ECD75D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				658589CC2C01A5DBF76DA7A28871BF8B /* PBXTargetDependency */,
+				09097AD3B0EAFE0A5770A9D55BE82D72 /* PBXTargetDependency */,
 			);
 			name = "Pods-FuzzyMatchingSwift_Example";
 			productName = Pods_FuzzyMatchingSwift_Example;
@@ -274,12 +274,12 @@
 		};
 		D78E88F7DB454D1950E97FD8D03CEEFD /* FuzzyMatchingSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6092C6AD2D0F2D36F7AD2FE8A15BA69E /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift" */;
+			buildConfigurationList = 186E4E2DADDD83CDF3F07089F0533390 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift" */;
 			buildPhases = (
-				4BAE6EA60A4C9BF74624B542191B6BCE /* Headers */,
-				88BB8983CFA8971B9EE3B2A020D1539D /* Sources */,
-				502EC28738B14891D988144EA51DAE00 /* Frameworks */,
-				8377EEFCFFD28D6E09F1C109ED6EAFC4 /* Resources */,
+				F9C13DB5A69A56F0B885E6B5A8CF24C7 /* Headers */,
+				F78BFE99C7A6E649C9D5E66EE3336108 /* Sources */,
+				6558F0793F54E711AE67EDF6D1F9913C /* Frameworks */,
+				397ACB2EDC8654DDBF793B4FE296FD75 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -292,17 +292,17 @@
 		};
 		DA248B4A4204D6BB24C88F3A6F8BC78A /* Pods-FuzzyMatchingSwift_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47549555A6A988E35364C9A8D7654FBC /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Tests" */;
+			buildConfigurationList = 5C2696ADFA2D1486150CF4E253BE7F3F /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Tests" */;
 			buildPhases = (
-				B4B631A01D034C63101B602072942B24 /* Headers */,
-				2AE6497ADB098817F8A3D0B01ADCBFA1 /* Sources */,
-				95900BEA5F910BCAED4B806DDA10634F /* Frameworks */,
-				6527E7520819DEC4064199AC7D03386D /* Resources */,
+				04849233845E31BE52F19D2F64562957 /* Headers */,
+				2D556D7E9D3A1D52CC29F4A62ABA391D /* Sources */,
+				F2A676E81CDA732FCB5CC8D188BCE019 /* Frameworks */,
+				2386973843243481774FBCDAFC78A152 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C35415F9B8135444C81320190DAFF5D0 /* PBXTargetDependency */,
+				05A5A030ADE75F6E325B0FAE344F22B8 /* PBXTargetDependency */,
 			);
 			name = "Pods-FuzzyMatchingSwift_Tests";
 			productName = Pods_FuzzyMatchingSwift_Tests;
@@ -315,8 +315,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -328,6 +328,7 @@
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = E26DD43C38C8FDAB4846336F8C13D1E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,21 +341,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6527E7520819DEC4064199AC7D03386D /* Resources */ = {
+		2386973843243481774FBCDAFC78A152 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8377EEFCFFD28D6E09F1C109ED6EAFC4 /* Resources */ = {
+		397ACB2EDC8654DDBF793B4FE296FD75 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FCD13B0703C1F38370293768FD4DAC3 /* Resources */ = {
+		FBA3A1CAF63EEF304A1F45CB43ECD75D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,184 +365,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25C666FBF11F5B8861993A13F8CE0B03 /* Sources */ = {
+		2D556D7E9D3A1D52CC29F4A62ABA391D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8208B0E0A95B247A3C8EE2963DA4B01C /* Pods-FuzzyMatchingSwift_Example-dummy.m in Sources */,
+				77D973AAC6F8605FE2F9997B7C941B0C /* Pods-FuzzyMatchingSwift_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AE6497ADB098817F8A3D0B01ADCBFA1 /* Sources */ = {
+		7E1BFA1150CF9A6167D1B2969413AABB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201C39CED9A3C986DA7F30DBEB7A8473 /* Pods-FuzzyMatchingSwift_Tests-dummy.m in Sources */,
+				8F40A1748BAE949FBEE60DCFDBEA5EB8 /* Pods-FuzzyMatchingSwift_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88BB8983CFA8971B9EE3B2A020D1539D /* Sources */ = {
+		F78BFE99C7A6E649C9D5E66EE3336108 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C894FB204A7DB00B729E9565DF9A6BC /* FuzzyMatching.swift in Sources */,
-				1CF9D599A8CB6C25FA28C758C9E808E7 /* FuzzyMatchingSwift-dummy.m in Sources */,
+				68593A61F39F3E53EBAD10268318511D /* FuzzyMatching.swift in Sources */,
+				8AB42F61D9D480871EAE309BBE4C5504 /* FuzzyMatchingSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		658589CC2C01A5DBF76DA7A28871BF8B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FuzzyMatchingSwift;
-			target = D78E88F7DB454D1950E97FD8D03CEEFD /* FuzzyMatchingSwift */;
-			targetProxy = FFD857F838CA190A9101BB4EB8B7DE5F /* PBXContainerItemProxy */;
-		};
-		C35415F9B8135444C81320190DAFF5D0 /* PBXTargetDependency */ = {
+		05A5A030ADE75F6E325B0FAE344F22B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-FuzzyMatchingSwift_Example";
 			target = AE249A27D3C99143957DDAB1CAF42C16 /* Pods-FuzzyMatchingSwift_Example */;
-			targetProxy = 11639617078CB5AFE4E8BB117D2A97D1 /* PBXContainerItemProxy */;
+			targetProxy = 5922A92DDB9803C65D9C07EF0DB7A681 /* PBXContainerItemProxy */;
+		};
+		09097AD3B0EAFE0A5770A9D55BE82D72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FuzzyMatchingSwift;
+			target = D78E88F7DB454D1950E97FD8D03CEEFD /* FuzzyMatchingSwift */;
+			targetProxy = 795A92DD9EA151B6610AAC779CED38DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2789E78DB8A6C0DD53B14CA0E54E5FC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA73748688F0963425AECAEDF424FAF /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		49B19DEF87F6235B8BDB78C9F0354C26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75229DC493D65D632E714AE85B6EEF5E /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		588CDC04674D147333BA528186E70485 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 052FC42CD19C460C6D0BEB9E5C754920 /* FuzzyMatchingSwift.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
-				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
-				PRODUCT_NAME = FuzzyMatchingSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.9;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AB91421E3ABAC54DE1786F2C532E29FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 175A05169017118CF55AD33D9CCF39BB /* FuzzyMatchingSwift.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
-				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
-				PRODUCT_NAME = FuzzyMatchingSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.9;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B0F4EFC72D5CA7C90BA84D5021850027 /* Debug */ = {
+		15365DEED4D92BEFDD111986F9923DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F75D33AA81BA120B6256DC8AACB7E11 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */;
 			buildSettings = {
@@ -558,7 +425,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
@@ -575,42 +442,7 @@
 			};
 			name = Debug;
 		};
-		B51A31D12DA0360244F08FC34D0233BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2B339408055950FE535B234CD6A7B45 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B86D71A5E7AB53EB2C08DEA39FBD2050 /* Release */ = {
+		531AB9B51913EE274022D67EB63CB4E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -660,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,7 +504,107 @@
 			};
 			name = Release;
 		};
-		BD5E84F7B72D348654A4D58B6BA51118 /* Debug */ = {
+		5B3949D2C6B0D064A5574AF9210B85D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 175A05169017118CF55AD33D9CCF39BB /* FuzzyMatchingSwift.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
+				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		77EA7E6AA9B8FCE5D1D51F86B090009A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052FC42CD19C460C6D0BEB9E5C754920 /* FuzzyMatchingSwift.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
+				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
+				PRODUCT_NAME = FuzzyMatchingSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D3DEDEED7A78033A6539EF61E992AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75229DC493D65D632E714AE85B6EEF5E /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A06A0B8B8C2AC1F57A3C67ACD4FEC0B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -725,7 +657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -738,14 +670,83 @@
 			};
 			name = Debug;
 		};
+		C6388FE21598942B280CBA4E748A8873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA73748688F0963425AECAEDF424FAF /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3834D88FB54AF42A07F11E45159A64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2B339408055950FE535B234CD6A7B45 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47549555A6A988E35364C9A8D7654FBC /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Tests" */ = {
+		186E4E2DADDD83CDF3F07089F0533390 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2789E78DB8A6C0DD53B14CA0E54E5FC1 /* Debug */,
-				49B19DEF87F6235B8BDB78C9F0354C26 /* Release */,
+				77EA7E6AA9B8FCE5D1D51F86B090009A /* Debug */,
+				5B3949D2C6B0D064A5574AF9210B85D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -753,26 +754,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD5E84F7B72D348654A4D58B6BA51118 /* Debug */,
-				B86D71A5E7AB53EB2C08DEA39FBD2050 /* Release */,
+				A06A0B8B8C2AC1F57A3C67ACD4FEC0B3 /* Debug */,
+				531AB9B51913EE274022D67EB63CB4E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6092C6AD2D0F2D36F7AD2FE8A15BA69E /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift" */ = {
+		5C2696ADFA2D1486150CF4E253BE7F3F /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				588CDC04674D147333BA528186E70485 /* Debug */,
-				AB91421E3ABAC54DE1786F2C532E29FA /* Release */,
+				C6388FE21598942B280CBA4E748A8873 /* Debug */,
+				8D3DEDEED7A78033A6539EF61E992AF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C31ED0E2FE0B7719D59E3314F96B7677 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Example" */ = {
+		7338772186F5516805E228966B504BE5 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0F4EFC72D5CA7C90BA84D5021850027 /* Debug */,
-				B51A31D12DA0360244F08FC34D0233BF /* Release */,
+				15365DEED4D92BEFDD111986F9923DE6 /* Debug */,
+				E3834D88FB54AF42A07F11E45159A64A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

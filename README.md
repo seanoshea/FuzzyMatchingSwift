@@ -1,13 +1,13 @@
 # FuzzyMatchingSwift
 
-[![CI Status](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop.svg?style=svg)](https://circleci.com/gh/seanoshea/FuzzyMatchingSwift/tree/develop)
+[![CI Status](https://github.com/seanoshea/FuzzyMatchingSwift/actions/workflows/ci.yml/badge.svg)](https://github.com/seanoshea/FuzzyMatchingSwift/actions/workflows/ci.yml)
 [![Code Coverage](http://codecov.io/github/seanoshea/FuzzyMatchingSwift/coverage.svg?branch=develop)](http://codecov.io/github/seanoshea/FuzzyMatchingSwift?branch=develop)
 [![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/cocoapods/l/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Version](https://img.shields.io/cocoapods/v/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Platform](https://img.shields.io/cocoapods/p/FuzzyMatchingSwift.svg?style=flat)](http://cocoapods.org/pods/FuzzyMatchingSwift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift 5.2.x](https://img.shields.io/badge/Swift-5.2.x-orange.svg)
+![Swift 6.2](https://img.shields.io/badge/Swift-6.2-orange.svg)
 [![Languages](https://img.shields.io/github/languages/count/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/languages/count/seanoshea/FuzzyMatchingSwift)
 [![Top Language](https://img.shields.io/github/languages/top/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/languages/top/seanoshea/FuzzyMatchingSwift)
 [![Open Issues](https://img.shields.io/github/issues/seanoshea/FuzzyMatchingSwift)](https://img.shields.io/github/issues/seanoshea/FuzzyMatchingSwift)
@@ -63,10 +63,11 @@ All documentation is maintained at [Cocoadocs](http://cocoadocs.org/docsets/Fuzz
 
 ## Requirements
 
-- iOS >= 18.0
-- MacOS >= 15.0
-- watchOS >= 11.0
-- tvOS >= 8.0
+- iOS >= 18.2
+- macOS >= 15.2
+- watchOS >= 11.2
+- tvOS >= 18.2
+- Swift 6.2+
 
 ## Installation
 

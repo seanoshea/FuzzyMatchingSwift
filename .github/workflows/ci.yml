@@ -1,0 +1,129 @@
+name: CI
+
+on:
+  push:
+    branches: [ develop, master, main ]
+  pull_request:
+    branches: [ develop, master, main ]
+
+jobs:
+  swiftlint:
+    name: SwiftLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --config .swiftlint.yml
+
+  build-and-test:
+    name: Build and Test
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show available Xcode versions
+        run: ls /Applications/ | grep Xcode
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List available simulators
+        run: xcrun simctl list devices available
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.7'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install xcpretty
+          cd Example
+          bundle exec pod install
+
+      - name: Run tests
+        run: |
+          set -o pipefail && xcodebuild \
+            -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
+            -scheme FuzzyMatchingSwift-Example \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
+            ONLY_ACTIVE_ARCH=YES \
+            GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
+            GCC_GENERATE_TEST_COVERAGE_FILES=YES \
+            -enableCodeCoverage YES \
+            clean test | xcpretty
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: |
+            **/*.xcresult
+            junit.xml
+          retention-days: 7
+
+  build-platforms:
+    name: Build All Platforms
+    runs-on: macos-15
+    strategy:
+      matrix:
+        include:
+          - scheme: FuzzyMatchingSwift-iOS
+            destination: generic/platform=iOS
+          - scheme: FuzzyMatchingSwift-macOS
+            destination: platform=macOS
+          - scheme: FuzzyMatchingSwift-watchOS
+            destination: generic/platform=watchOS
+          - scheme: FuzzyMatchingSwift-tvOS
+            destination: generic/platform=tvOS
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.7'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install xcpretty
+          cd Example
+          bundle exec pod install
+
+      - name: Build ${{ matrix.scheme }}
+        run: |
+          set -o pipefail && xcodebuild \
+            -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
+            -scheme ${{ matrix.scheme }} \
+            -destination "${{ matrix.destination }}" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            clean build | xcpretty
+
+  pod-lint:
+    name: Pod Lib Lint
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.7'
+          bundler-cache: true
+
+      - name: Run pod lib lint
+        run: bundle exec pod lib lint --quick

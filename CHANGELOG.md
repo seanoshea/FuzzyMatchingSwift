@@ -1,3 +1,15 @@
+# Version 0.10.0
+
+- Upgraded to Swift 6.2
+- Updated minimum deployment targets:
+  - iOS 18.2
+  - macOS 15.2
+  - watchOS 11.2
+  - tvOS 18.2
+- Updated Xcode to 16.2 in CI environment
+- Migrated from CircleCI to GitHub Actions
+- Updated Ruby requirement to 3.4.7
+
 # Version 0.9.0
 
 - Upgrading Swift and iOS/MacOS/watchOS and tvOS versions.
