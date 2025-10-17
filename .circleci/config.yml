@@ -4,15 +4,15 @@ orbs:
 jobs:
   build-and-test:
     macos:
-      xcode: 16.0
+      xcode: 16.2
     shell: /bin/bash --login -o pipefail
     steps:
       - macos/switch-ruby:
-        version: "3.3"
+        version: "3.4"
       - checkout
       - run: bundle install
       - run: cd Example && bundle exec pod install
-      - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=18.0,name=iPhone 16 Pro Max" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output junit.xml
+      - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-Example -destination "platform=iOS Simulator,OS=18.2,name=iPhone 16 Pro Max" ONLY_ACTIVE_ARCH=YES GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -enableCodeCoverage YES clean test | xcpretty -c --report junit --output junit.xml
       - store_artifacts:
           path: junit.xml
       - run: xcodebuild -workspace ./Example/FuzzyMatchingSwift.xcworkspace -scheme FuzzyMatchingSwift-iOS CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" clean build | xcpretty -c

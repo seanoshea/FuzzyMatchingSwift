@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                      = 'FuzzyMatchingSwift'
-  s.version                   = '0.9.0'
+  s.version                   = '0.10.0'
   s.summary                   = 'Fuzzy matching String extensions.'
   s.description               = <<-DESC
 FuzzyMatchingSwift provides String extensions which allow developers to find similar Strings in Strings and Arrays of Strings.
@@ -12,10 +12,10 @@ FuzzyMatchingSwift provides String extensions which allow developers to find sim
   s.social_media_url          = 'https://twitter.com/seanoshea'
   s.requires_arc              = true
   s.compiler_flags            = '-whole-module-optimization'
-  s.ios.deployment_target     = '18.0'
-  s.osx.deployment_target     = '15.0'
-  s.watchos.deployment_target = '11.0'
-  s.tvos.deployment_target    = '18.0'
+  s.ios.deployment_target     = '18.2'
+  s.osx.deployment_target     = '15.2'
+  s.watchos.deployment_target = '11.2'
+  s.tvos.deployment_target    = '18.2'
   s.source_files              = 'FuzzyMatchingSwift/Classes/**/*'
-  s.swift_version             = '5.9'
+  s.swift_version             = '6.2'
 end
