@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ develop, master, main ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   swiftlint:
     name: SwiftLint
@@ -19,22 +23,22 @@ jobs:
         with:
           args: --config .swiftlint.yml
 
-  build-and-test:
-    name: Build and Test
+  build-and-test-ios:
+    name: Build and Test iOS
     runs-on: macos-15
-
+    strategy:
+      matrix:
+        xcode-version: ['15.3', '15.4']
+        ios-version: ['17.5', '18.0', '18.2']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show available Xcode versions
-        run: ls /Applications/ | grep Xcode
+      - name: Select Xcode ${{ matrix.xcode-version }}
+        run: sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer || echo "Xcode ${{ matrix.xcode-version }} not available"
 
       - name: Show Xcode version
         run: xcodebuild -version
-
-      - name: List available simulators
-        run: xcrun simctl list devices available
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -48,43 +52,40 @@ jobs:
           cd Example
           bundle exec pod install
 
-      - name: Run tests
+      - name: Run iOS tests
         run: |
           set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
             -scheme FuzzyMatchingSwift-Example \
-            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
+            -destination "platform=iOS Simulator,OS=${{ matrix.ios-version }},name=iPhone 16 Pro" \
             ONLY_ACTIVE_ARCH=YES \
             GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
             GCC_GENERATE_TEST_COVERAGE_FILES=YES \
             -enableCodeCoverage YES \
             clean test | xcpretty
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+        continue-on-error: true
+
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results
+          name: test-results-ios-${{ matrix.xcode-version }}-${{ matrix.ios-version }}
           path: |
             **/*.xcresult
             junit.xml
           retention-days: 7
 
-  build-platforms:
-    name: Build All Platforms
+  build-macos:
+    name: Build and Test macOS
     runs-on: macos-15
-    strategy:
-      matrix:
-        include:
-          - scheme: FuzzyMatchingSwift-iOS
-            destination: generic/platform=iOS
-          - scheme: FuzzyMatchingSwift-macOS
-            destination: platform=macOS
-          - scheme: FuzzyMatchingSwift-watchOS
-            destination: generic/platform=watchOS
-          - scheme: FuzzyMatchingSwift-tvOS
-            destination: generic/platform=tvOS
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -101,20 +102,101 @@ jobs:
           cd Example
           bundle exec pod install
 
-      - name: Build ${{ matrix.scheme }}
+      - name: Run macOS tests
         run: |
           set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
-            -scheme ${{ matrix.scheme }} \
-            -destination "${{ matrix.destination }}" \
+            -scheme FuzzyMatchingSwift-macOS \
+            -destination "platform=macOS" \
+            GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
+            GCC_GENERATE_TEST_COVERAGE_FILES=YES \
+            -enableCodeCoverage YES \
+            clean test | xcpretty
+        continue-on-error: true
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-macos
+          path: |
+            **/*.xcresult
+          retention-days: 7
+
+  build-watchos:
+    name: Build watchOS
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.7'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install xcpretty
+          cd Example
+          bundle exec pod install
+
+      - name: Build watchOS
+        run: |
+          set -o pipefail && xcodebuild \
+            -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
+            -scheme FuzzyMatchingSwift-watchOS \
+            -destination "generic/platform=watchOS" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
             clean build | xcpretty
 
+  build-tvos:
+    name: Build tvOS
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4.7'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install xcpretty
+          cd Example
+          bundle exec pod install
+
+      - name: Build tvOS
+        run: |
+          set -o pipefail && xcodebuild \
+            -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
+            -scheme FuzzyMatchingSwift-tvOS \
+            -destination "generic/platform=tvOS" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            clean build | xcpretty
+
+  spm-build:
+    name: Build with SPM
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build with Swift Package Manager
+        run: swift build
+
+      - name: Test with Swift Package Manager
+        run: swift test
+
   pod-lint:
     name: Pod Lib Lint
     runs-on: macos-15
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4

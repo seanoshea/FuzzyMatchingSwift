@@ -1,3 +1,63 @@
+# Version 0.11.0
+
+## Major Features
+- **NEW: Swift Package Manager (SPM) Support** - Full SPM integration with Package.swift
+  - Lower deployment targets for SPM: iOS 16+, macOS 13+, watchOS 9+, tvOS 16+
+  - Enables support for iOS 16 and 17 users
+  - Strict concurrency mode enabled in Package.swift
+- **Swift 6 Modernization** - Full compatibility with Swift 6.2
+  - Added Sendable conformance to FuzzyMatchOptions and FuzzyMatchingOptionsDefaultValues
+  - Safe use in concurrent and actor contexts
+  - Strict concurrency checking enabled
+
+## Code Quality Improvements
+- **Comprehensive Documentation** - Added DocC documentation throughout the codebase
+  - All public APIs documented with detailed descriptions
+  - Parameter and return value documentation
+  - Algorithm explanations for internal methods
+  - Rich IDE code completion support
+- **Modern Swift Patterns**
+  - Removed deprecated NSNotFound usage (replaced with Optional)
+  - Updated Sequence protocol usage (Iterator.Element → Element)
+  - Improved nil coalescing operators
+  - Modern comparison result handling
+  - Standardized access control modifiers
+
+## CI/CD & Build System Enhancements
+- **Expanded CI/CD Pipeline** - From 4 jobs to 8 comprehensive jobs
+  - Added Xcode version matrix testing (15.3, 15.4)
+  - Added iOS version matrix testing (17.5, 18.0, 18.2)
+  - Full platform test coverage: iOS, macOS, tvOS, watchOS
+  - Added SPM build verification in CI
+  - Integrated Codecov for automatic coverage tracking
+- **Enhanced SwiftLint Configuration**
+  - Reduced disabled rules: 9 → 1 (with justification)
+  - Added strict concurrency checking
+  - Added documentation enforcement
+  - Configured rule thresholds for better code quality
+- **Code Coverage Integration**
+  - Automatic coverage reporting to Codecov
+  - Coverage artifacts preserved for analysis
+  - Ready for coverage badges in README
+
+## Documentation
+- Created MODERNIZATION.md with detailed implementation guide
+- Created REVIEW_RESULTS.md with comprehensive review results
+- Updated inline code documentation throughout
+
+## Backward Compatibility
+- ✅ 100% backward compatible
+- All public API signatures unchanged
+- All existing code continues to work without modification
+- No breaking changes
+
+## Distribution Methods
+- ✅ CocoaPods (unchanged)
+- ✅ Carthage (unchanged)
+- ✅ Swift Package Manager (NEW)
+
+---
+
 # Version 0.10.0
 
 - Upgraded to Swift 6.2

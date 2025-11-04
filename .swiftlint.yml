@@ -1,13 +1,54 @@
-disabled_rules:
-  - line_length
-  - variable_name
-  - trailing_whitespace
-  - colon
-  - function_body_length
-  - type_name
-  - cyclomatic_complexity
-  - function_parameter_count
-  - shorthand_operator
 excluded:
   - Carthage
   - Pods
+  - .build
+  - DerivedData
+
+# Disabled rules with justification - should be re-evaluated
+disabled_rules:
+  - trailing_whitespace  # Handled by IDE formatting
+
+# Configure individual rules
+line_length:
+  warning: 120
+  error: 160
+  ignores_urls: true
+  ignores_function_declarations: true
+
+function_body_length:
+  warning: 50
+  error: 100
+
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+
+function_parameter_count:
+  warning: 5
+  error: 8
+
+variable_name:
+  min_length: 1
+  max_length: 40
+
+type_name:
+  min_length: 3
+  max_length: 40
+
+# Enable documentation rules
+documentation:
+  warning
+missing_docs:
+  warning
+
+# Swift 6 strict concurrency
+strict_concurrency:
+  warning
+
+# Require use of Sendable
+sendable:
+  warning
+
+# Prefer modern Swift patterns
+implicitly_unwrapped_optional: error
+force_unwrapping: warning
