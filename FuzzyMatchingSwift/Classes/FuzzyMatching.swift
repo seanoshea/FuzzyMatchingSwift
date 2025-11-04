@@ -173,9 +173,10 @@ extension String {
         guard !pattern.isEmpty else { return nil }
 
         // Try quick substring search optimization
-        if location + pattern.count <= count {
-            let endIndex = self.index(startIndex, offsetBy: pattern.count)
-            let substring = self[startIndex...endIndex]
+        if pattern.count <= count {
+            let endOffset = min(pattern.count, count)
+            let endIndex = self.index(startIndex, offsetBy: endOffset)
+            let substring = self[startIndex..<endIndex]
 
             if pattern.caseInsensitiveCompare(substring) == .orderedSame {
                 return location
@@ -291,7 +292,7 @@ extension String {
 
     /// Gets the character match bitmask for a position.
     func getCharacterMatch(at position: Int, in alphabet: [String: Int]) -> Int {
-        guard position > 0, position <= count else { return 0 }
+        guard position > 0, position < count else { return 0 }
 
         let index = self.index(startIndex, offsetBy: position - 1)
         let character = String(self[index])
