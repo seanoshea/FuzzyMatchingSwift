@@ -47,8 +47,8 @@ class FuzzyMatchingArrayTests: XCTestCase {
   }
   
   func testMatchingStringsInArraysWithOptions() {
-    let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
-    let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1.0)
+    let first = ["one", "two", "three"].sortedByFuzzyMatchPattern("on", loc:  0, distance:  1000.0)
+    let second = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc:  0, distance:  1.0)
     let third = ["one", "two", "three"].sortedByFuzzyMatchPattern("on")
 
     XCTAssert(first[0] == "one")
@@ -82,7 +82,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
       let desolationRow = String.init(data: try Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
       let array = desolationRow.split {$0 == " "}.map(String.init)
       
-      let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc: 0, distance: 1000.0)
+      let resultantArray = array.sortedByFuzzyMatchPattern("Desolation", loc:  0, distance:  1000.0)
       
       // 10 verses in this song
       XCTAssert(resultantArray[0] == "Desolation")
@@ -104,7 +104,7 @@ class FuzzyMatchingArrayTests: XCTestCase {
   
   func testPerformance() {
     measureMetrics(type(of: self).defaultPerformanceMetrics, automaticallyStartMeasuring:true, for: {
-      _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc: 0, distance: 1000.0)
+      _ = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"].sortedByFuzzyMatchPattern("on", loc:  0, distance:  1000.0)
       self.stopMeasuring()
     })
   }

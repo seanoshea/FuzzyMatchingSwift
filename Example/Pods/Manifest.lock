@@ -1,5 +1,5 @@
 PODS:
-  - FuzzyMatchingSwift (0.10.0)
+  - FuzzyMatchingSwift (0.11.0)
 
 DEPENDENCIES:
   - FuzzyMatchingSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FuzzyMatchingSwift: 7cb7208f07b4b453f9e80d0db1fd77ea0c9efb44
+  FuzzyMatchingSwift: 568821453fc40822c8bd8c9e93bfdaff76c83e3c
 
 PODFILE CHECKSUM: 55ac2e1d60dce190d134e91cd11568d51dc0a095
 

@@ -68,9 +68,7 @@ jobs:
         if: always()
         with:
           name: test-results-ios
-          path: |
-            **/*.xcresult
-            junit.xml
+          path: junit.xml
           retention-days: 7
 
   build-macos:
@@ -109,8 +107,7 @@ jobs:
         if: always()
         with:
           name: test-results-macos
-          path: |
-            **/*.xcresult
+          path: junit.xml
           retention-days: 7
 
   build-watchos:

@@ -21,12 +21,12 @@ import FuzzyMatchingSwift
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var fuzzySampleText:UITextView!
-  @IBOutlet weak var fuzzyPattern:UITextField!
-  @IBOutlet weak var fuzzyLocation:UITextField!
-  @IBOutlet weak var fuzzyDistance:UITextField!
-  @IBOutlet weak var fuzzyThreshold:UITextField!
-  @IBOutlet weak var fuzzyMatchResult:UILabel!
+  @IBOutlet weak var fuzzySampleText: UITextView!
+  @IBOutlet weak var fuzzyPattern: UITextField!
+  @IBOutlet weak var fuzzyLocation: UITextField!
+  @IBOutlet weak var fuzzyDistance: UITextField!
+  @IBOutlet weak var fuzzyThreshold: UITextField!
+  @IBOutlet weak var fuzzyMatchResult: UILabel!
   
   @IBAction func fuzzyMatchButtonTappedWithSender(_ sender: UIButton) {
     let threshold = Double(self.fuzzyThreshold.text!)!
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     let location = Int(self.fuzzyLocation.text!)!
     let options = FuzzyMatchOptions.init(threshold: threshold, distance: distance)
     
-    if let result = sampleText.fuzzyMatchPattern(pattern, loc:location, options:options) {
+    if let result = sampleText.fuzzyMatchPattern(pattern, loc: location, options: options) {
       self.fuzzyMatchResult.text = "Found at \(result)"
     } else {
       self.fuzzyMatchResult.text = "Not Found"

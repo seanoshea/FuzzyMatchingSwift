@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -319,7 +319,7 @@
 				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -408,12 +408,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		15365DEED4D92BEFDD111986F9923DE6 /* Debug */ = {
+		44EC31AC0C13B6B3F9638CDDC9F728FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F75D33AA81BA120B6256DC8AACB7E11 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */;
+			baseConfigurationReference = 052FC42CD19C460C6D0BEB9E5C754920 /* FuzzyMatchingSwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -423,19 +421,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
+				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
+				PRODUCT_NAME = FuzzyMatchingSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -504,11 +505,10 @@
 			};
 			name = Release;
 		};
-		5B3949D2C6B0D064A5574AF9210B85D6 /* Release */ = {
+		8AB88CB5FCA3057CCAE8DD0D49B1D58F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 175A05169017118CF55AD33D9CCF39BB /* FuzzyMatchingSwift.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -522,7 +522,11 @@
 				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
 				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
 				PRODUCT_NAME = FuzzyMatchingSwift;
@@ -530,73 +534,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		77EA7E6AA9B8FCE5D1D51F86B090009A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 052FC42CD19C460C6D0BEB9E5C754920 /* FuzzyMatchingSwift.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FuzzyMatchingSwift/FuzzyMatchingSwift.modulemap";
-				PRODUCT_MODULE_NAME = FuzzyMatchingSwift;
-				PRODUCT_NAME = FuzzyMatchingSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8D3DEDEED7A78033A6539EF61E992AF8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75229DC493D65D632E714AE85B6EEF5E /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -670,12 +607,48 @@
 			};
 			name = Debug;
 		};
-		C6388FE21598942B280CBA4E748A8873 /* Debug */ = {
+		BF3681A3C9ED9DF1BBC926F5F1C3714B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA73748688F0963425AECAEDF424FAF /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */;
+			baseConfigurationReference = 0F75D33AA81BA120B6256DC8AACB7E11 /* Pods-FuzzyMatchingSwift_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F65EDA348432FD1825423A4135BBB881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75229DC493D65D632E714AE85B6EEF5E /* Pods-FuzzyMatchingSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -688,7 +661,49 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F85ED16EB97CD30BAACC7CD0650901B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA73748688F0963425AECAEDF424FAF /* Pods-FuzzyMatchingSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Tests/Pods-FuzzyMatchingSwift_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -704,12 +719,11 @@
 			};
 			name = Debug;
 		};
-		E3834D88FB54AF42A07F11E45159A64A /* Release */ = {
+		FF3D97858071900BF5A23FDDD72CB5C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2B339408055950FE535B234CD6A7B45 /* Pods-FuzzyMatchingSwift_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -722,7 +736,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMatchingSwift_Example/Pods-FuzzyMatchingSwift_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -745,8 +763,8 @@
 		186E4E2DADDD83CDF3F07089F0533390 /* Build configuration list for PBXNativeTarget "FuzzyMatchingSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77EA7E6AA9B8FCE5D1D51F86B090009A /* Debug */,
-				5B3949D2C6B0D064A5574AF9210B85D6 /* Release */,
+				44EC31AC0C13B6B3F9638CDDC9F728FD /* Debug */,
+				8AB88CB5FCA3057CCAE8DD0D49B1D58F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -763,8 +781,8 @@
 		5C2696ADFA2D1486150CF4E253BE7F3F /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C6388FE21598942B280CBA4E748A8873 /* Debug */,
-				8D3DEDEED7A78033A6539EF61E992AF8 /* Release */,
+				F85ED16EB97CD30BAACC7CD0650901B8 /* Debug */,
+				F65EDA348432FD1825423A4135BBB881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -772,8 +790,8 @@
 		7338772186F5516805E228966B504BE5 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMatchingSwift_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15365DEED4D92BEFDD111986F9923DE6 /* Debug */,
-				E3834D88FB54AF42A07F11E45159A64A /* Release */,
+				BF3681A3C9ED9DF1BBC926F5F1C3714B /* Debug */,
+				FF3D97858071900BF5A23FDDD72CB5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

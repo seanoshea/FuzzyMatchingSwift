@@ -33,64 +33,64 @@ class FuzzyMatchingStringTests: XCTestCase {
     XCTAssertTrue("pie".fuzzyMatchPattern("π") == nil)
 
     XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef") == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0) == 0)
-    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc:1) == nil)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc:3) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:  0) == 0)
+    XCTAssertTrue("".fuzzyMatchPattern("abcdef", loc: 1) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("", loc: 3) == nil)
     // "de" should be found in "abcdef" - either at position 3 or nearby
-    let deMatch = "abcdef".fuzzyMatchPattern("de", loc:3)
+    let deMatch = "abcdef".fuzzyMatchPattern("de", loc: 3)
     XCTAssertTrue(deMatch != nil, "Should find 'de' in 'abcdef'")
     // "defy" is a partial match - use weaker threshold to allow the match
-    let defyOptions = FuzzyMatchOptions(threshold: 0.8, distance: 1000.0)
-    let defyMatch = "abcdef".fuzzyMatchPattern("defy", loc:4, options: defyOptions)
+    let defyOptions = FuzzyMatchOptions(threshold:  0.8, distance:  1000.0)
+    let defyMatch = "abcdef".fuzzyMatchPattern("defy", loc: 4, options:  defyOptions)
     XCTAssertTrue(defyMatch != nil, "Should find approximate match for 'defy' in 'abcdef' with loose threshold")
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc:0) == 0)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdefy", loc: 0) == 0)
 
     XCTAssertTrue("🐶".fuzzyMatchPattern("🐶") == 0)
     XCTAssertTrue("🐶🐱🐶🐶🐶".fuzzyMatchPattern("🐱") == 1)
   }
 
   func testWithStrongThresholdOptions() {
-    let options = FuzzyMatchOptions.init(threshold: 0.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
-    XCTAssertTrue("a large block of text with no occurance of the last two letters of the alphabet".fuzzyMatchPattern("yz", loc:0, options:options) == nil)
-    XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc:0, options:options) == nil)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
+    let options = FuzzyMatchOptions.init(threshold:  0.0, distance:  FuzzyMatchingOptionsDefaultValues.distance.rawValue)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc: 0, options: options) == 0)
+    XCTAssertTrue("a large block of text with no occurance of the last two letters of the alphabet".fuzzyMatchPattern("yz", loc: 0, options: options) == nil)
+    XCTAssertTrue("Brevity is the soul of wit".fuzzyMatchPattern("Hamlet", loc: 0, options: options) == nil)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc: 0, options: options) == nil)
   }
   
   func testWithWeakThresholdOptions() {
-    var options = FuzzyMatchOptions.init(threshold: 1.0, distance: FuzzyMatchingOptionsDefaultValues.distance.rawValue)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc:0, options:options) == nil)
+    var options = FuzzyMatchOptions.init(threshold:  1.0, distance:  FuzzyMatchingOptionsDefaultValues.distance.rawValue)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc: 0, options: options) == 0)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("g", loc: 0, options: options) == nil)
     options.threshold = 0.8
-    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc:30) == 23)
+    XCTAssertTrue("'Twas brillig, and the slithy toves Did gyre and gimble in the wabe. All mimsy were the borogroves, And the mome raths outgrabe.".fuzzyMatchPattern("slimy tools", loc: 30) == 23)
   }
 
   func testWithDistanceOptions() {
-    let options = FuzzyMatchOptions.init(threshold: FuzzyMatchingOptionsDefaultValues.threshold.rawValue, distance: 1.0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc:0, options:options) == 0)
-    XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc:0, options:options) == nil)
+    let options = FuzzyMatchOptions.init(threshold:  FuzzyMatchingOptionsDefaultValues.threshold.rawValue, distance:  1.0)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("abcdef", loc: 0, options: options) == 0)
+    XCTAssertTrue("abcdef".fuzzyMatchPattern("fff", loc: 0, options: options) == nil)
   }
   
   func testSpeedUpBySearchingForSubstringFound() {
-    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("bc", loc:0, threshold:0.5, distance:1000.0)
+    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("bc", loc: 0, threshold: 0.5, distance: 1000.0)
     XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == 1)
     XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
   
   func testSpeedUpBySearchingForSubstringFoundDoubleByte() {
-    let speedUpBySearchingForSubstring = "🐶🐱🐶🐶🐶".speedUpBySearchingForSubstring("🐱", loc:0, threshold:0.5, distance:1000.0)
+    let speedUpBySearchingForSubstring = "🐶🐱🐶🐶🐶".speedUpBySearchingForSubstring("🐱", loc: 0, threshold: 0.5, distance: 1000.0)
     XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == 1)
     XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
   
   func testSpeedUpBySearchingForSubstringNotFound() {
-    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("ggg", loc:0, threshold:0.5, distance:1000.0)
+    let speedUpBySearchingForSubstring = "abcdef".speedUpBySearchingForSubstring("ggg", loc: 0, threshold: 0.5, distance: 1000.0)
     XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == nil)
     XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
   
   func testSpeedUpBySearchingForSubstringNotFoundDoubleByte() {
-    let speedUpBySearchingForSubstring = "🐱🐱🐱".speedUpBySearchingForSubstring("🐭", loc:0, threshold:0.5, distance:1000.0)
+    let speedUpBySearchingForSubstring = "🐱🐱🐱".speedUpBySearchingForSubstring("🐭", loc: 0, threshold: 0.5, distance: 1000.0)
     XCTAssertTrue(speedUpBySearchingForSubstring.bestLoc == nil)
     XCTAssertTrue(speedUpBySearchingForSubstring.threshold == 0.5)
   }
@@ -128,9 +128,9 @@ class FuzzyMatchingStringTests: XCTestCase {
       let secondWord = desolationRow.fuzzyMatchPattern("selling")
       let secondLine = desolationRow.fuzzyMatchPattern("The beauty parlor")
       
-      let options = FuzzyMatchOptions.init(threshold:0.5, distance:Double(10000))
+      let options = FuzzyMatchOptions.init(threshold: 0.5, distance: Double(10000))
       
-      let eliot = desolationRow.fuzzyMatchPattern("T.S. Eliot", loc: 0, options: options)
+      let eliot = desolationRow.fuzzyMatchPattern("T.S. Eliot", loc:  0, options:  options)
       
       XCTAssertTrue(firstWord == 0)
       XCTAssertTrue(secondWord == 8)
