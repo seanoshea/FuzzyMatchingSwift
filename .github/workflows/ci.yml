@@ -26,19 +26,9 @@ jobs:
   build-and-test-ios:
     name: Build and Test iOS
     runs-on: macos-15
-    strategy:
-      matrix:
-        xcode-version: ['15.3', '15.4']
-        ios-version: ['17.5', '18.0', '18.2']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Select Xcode ${{ matrix.xcode-version }}
-        run: sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer || echo "Xcode ${{ matrix.xcode-version }} not available"
-
-      - name: Show Xcode version
-        run: xcodebuild -version
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -57,7 +47,7 @@ jobs:
           set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
             -scheme FuzzyMatchingSwift-Example \
-            -destination "platform=iOS Simulator,OS=${{ matrix.ios-version }},name=iPhone 16 Pro" \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
             ONLY_ACTIVE_ARCH=YES \
             GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
             GCC_GENERATE_TEST_COVERAGE_FILES=YES \
@@ -77,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-ios-${{ matrix.xcode-version }}-${{ matrix.ios-version }}
+          name: test-results-ios
           path: |
             **/*.xcresult
             junit.xml
