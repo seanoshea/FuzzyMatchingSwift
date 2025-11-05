@@ -65,7 +65,19 @@ class FuzzyMatchingArrayTests: XCTestCase {
   }
   
   func testLongArray() {
-    let path = Bundle(for: type(of: self)).path(forResource: "desolation_row", ofType: "txt")!
+    // Support both SPM and CocoaPods bundle access
+    let bundle: Bundle
+    #if SWIFT_PACKAGE
+      bundle = Bundle.module
+    #else
+      bundle = Bundle(for: type(of: self))
+    #endif
+
+    guard let path = bundle.path(forResource: "desolation_row", ofType: "txt") else {
+      XCTFail("Could not find desolation_row.txt resource")
+      return
+    }
+
     do {
       let desolationRow = String.init(data: try Data(contentsOf: URL(fileURLWithPath: path)), encoding: String.Encoding.utf8)!
       let array = desolationRow.split {$0 == " "}.map(String.init)
