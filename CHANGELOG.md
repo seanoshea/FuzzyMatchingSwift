@@ -1,3 +1,26 @@
+# Version 0.11.1
+
+## Bug Fixes & Improvements
+- **SPM Bundle Resource Access** - Fixed test resource loading for SPM builds
+  - Tests now properly access desolation_row.txt via Bundle.module in SPM
+  - Maintains CocoaPods compatibility with Bundle(for:)
+- **Test Assertion Fixes** - Updated to use appropriate fuzzy match thresholds
+  - Fixed partial match test case with stricter threshold handling
+- **Code Style** - Fixed all SwiftLint colon spacing violations
+  - Proper spacing in parameter declarations and type annotations
+- **CI/CD Reliability** - Simplified pipeline to avoid CocoaPods sandbox issues
+  - Removed problematic Xcode-based testing with CocoaPods embedding
+  - Now relies on SPM for comprehensive testing (14 tests)
+  - Maintains framework build verification for all platforms
+
+## Platform Support
+- iOS 16+ (SPM), iOS 18.2+ (CocoaPods)
+- macOS 13+ (SPM), macOS 15.2+ (CocoaPods)
+- watchOS 9+ (SPM), watchOS 11.2+ (CocoaPods)
+- tvOS 16+ (SPM), tvOS 18.2+ (CocoaPods)
+
+---
+
 # Version 0.11.0
 
 ## Major Features
