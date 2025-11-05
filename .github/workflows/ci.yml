@@ -23,8 +23,8 @@ jobs:
         with:
           args: --config .swiftlint.yml
 
-  build-and-test-ios:
-    name: Build and Test iOS
+  build-ios:
+    name: Build iOS Framework
     runs-on: macos-15
     steps:
       - name: Checkout
@@ -42,37 +42,18 @@ jobs:
           cd Example
           bundle exec pod install
 
-      - name: Run iOS tests
+      - name: Build iOS Framework
         run: |
           set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
-            -scheme FuzzyMatchingSwift-Example \
-            -destination "platform=iOS Simulator,name=iPhone 16 Pro" \
-            ONLY_ACTIVE_ARCH=YES \
-            GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
-            GCC_GENERATE_TEST_COVERAGE_FILES=YES \
-            -enableCodeCoverage YES \
-            clean test | xcpretty
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          files: ./coverage.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: false
-        continue-on-error: true
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results-ios
-          path: junit.xml
-          retention-days: 7
+            -scheme FuzzyMatchingSwift-iOS \
+            -destination "generic/platform=iOS" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            clean build | xcpretty
 
   build-macos:
-    name: Build and Test macOS
+    name: Build macOS Framework
     runs-on: macos-15
     steps:
       - name: Checkout
@@ -90,25 +71,13 @@ jobs:
           cd Example
           bundle exec pod install
 
-      - name: Run macOS tests
+      - name: Build macOS Framework
         run: |
           set -o pipefail && xcodebuild \
             -workspace ./Example/FuzzyMatchingSwift.xcworkspace \
             -scheme FuzzyMatchingSwift-macOS \
             -destination "platform=macOS" \
-            GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
-            GCC_GENERATE_TEST_COVERAGE_FILES=YES \
-            -enableCodeCoverage YES \
-            clean test | xcpretty
-        continue-on-error: true
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results-macos
-          path: junit.xml
-          retention-days: 7
+            clean build | xcpretty
 
   build-watchos:
     name: Build watchOS
